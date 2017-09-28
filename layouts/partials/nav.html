@@ -6,7 +6,7 @@
       </div>
       <div class="nav-right">
         <nav class="nav-item level is-mobile">
-          <a class="level-item nav-text" href="about">About</a>
+          <a class="level-item nav-text" href="{{ .Site.BaseURL }}/about">About</a>
           {{ range .Site.Params.social }}
           <a class="level-item" href="{{ .url }}">
             <span class="icon">

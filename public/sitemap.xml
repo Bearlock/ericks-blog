@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://erickrdiaz.com/about/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erickrdiaz.com/posts/testing-cloud-functions/</loc>
+    <lastmod>2017-09-15T14:15:54-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erickrdiaz.com/posts/end-of-year-retrospective/</loc>
+    <lastmod>2016-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erickrdiaz.com/posts/a-status-update/</loc>
+    <lastmod>2016-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erickrdiaz.com/posts/messing-with-lakka-and-chromebox/</loc>
+    <lastmod>2016-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erickrdiaz.com/posts/importance-of-open-source/</loc>
+    <lastmod>2016-02-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erickrdiaz.com/posts/practical-python-projects-a-case-study/</loc>
+    <lastmod>2016-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erickrdiaz.com/posts/spring-semester-reflections-and-impressions/</loc>
+    <lastmod>2016-01-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erickrdiaz.com/posts/new-year-new-resolutions/</loc>
+    <lastmod>2016-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erickrdiaz.com/posts/on-games-and-firsts-a-case-study/</loc>
+    <lastmod>2015-12-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erickrdiaz.com/posts/actually-doing-it/</loc>
+    <lastmod>2015-12-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erickrdiaz.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://erickrdiaz.com/posts/</loc>
+    <lastmod>2017-09-15T14:15:54-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://erickrdiaz.com/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://erickrdiaz.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

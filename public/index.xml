@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Robots Have Feelings</title>
+    <link>https://erickrdiaz.com/</link>
+    <description>Recent content on Robots Have Feelings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://erickrdiaz.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Me</title>
+      <link>https://erickrdiaz.com/about/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://erickrdiaz.com/about/</guid>
+      <description> Hello! Hey folks. I&amp;rsquo;m Erick Diaz. I&amp;rsquo;m a software engineer at Yours and can be found most places online under the handle Bearlock. I&amp;rsquo;m a Utah native that digs exploring all it has to offer with my wife and four dogs. I&amp;rsquo;m interested in all sorts of technologies, philosophies, and bits of useless trivia.
+Games I&amp;rsquo;m playin&amp;rsquo;:  Tom Clancey&amp;rsquo;s Splinter Cell (entire series) Overwatch Dwarf Fortress  Books I&amp;rsquo;m readin&amp;rsquo;:  Software Testing The Pragmatic Programmer Joy of Elixir  Tools I&amp;rsquo;m jivin&amp;rsquo;:  iTerm2 Atom Vue Hugo  </description>
+    </item>
+    
+    <item>
+      <title>Testing Cloud Functions</title>
+      <link>https://erickrdiaz.com/posts/testing-cloud-functions/</link>
+      <pubDate>Fri, 15 Sep 2017 14:15:54 -0600</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/testing-cloud-functions/</guid>
+      <description>Click me if you wanna get right to testing It is now 2017 Happy belated new year.
+Its been about nine months now. Change is constant and inevitable. In this year alone I have:
+ Gotten a new and exciting job, Bought a beautiful dream-home, and Began wrapping up my last year of college  Several big and life-altering changes. Its sad to say, but writing here took a backseat to the other priorities in my life.</description>
+    </item>
+    
+    <item>
+      <title>End of Year Retrospective</title>
+      <link>https://erickrdiaz.com/posts/end-of-year-retrospective/</link>
+      <pubDate>Tue, 27 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/end-of-year-retrospective/</guid>
+      <description>It&amp;rsquo;s been quite a year Turns out when school is in session, I&amp;rsquo;m not the best at keeping this thing updated; my apologies. I feel like that&amp;rsquo;s okay though. I may not be great at keeping on top of this, but I still have a vested interest in maintaining this blog &amp;ndash; at least, when I have some free time (whoo winter break!). As usual, and according to the dictates of the universe, I&amp;rsquo;m busy with school, work, side-projects, friends, video-games; the list goes on.</description>
+    </item>
+    
+    <item>
+      <title>A Status Update</title>
+      <link>https://erickrdiaz.com/posts/a-status-update/</link>
+      <pubDate>Wed, 29 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/a-status-update/</guid>
+      <description>Whoa, hey It&amp;rsquo;s been a while right? I barely recognize you (or myself). It&amp;rsquo;s been about four months now with nary an update or peep out of me. Not really good attendance. To be honest, I feel a bit guilty. Not too guilty mind you &amp;ndash; just a bit. Life has been more unexpected than I expected. Things came up, things happened, balls were dropped, mistakes were made, assignments were overdue, vacations were had, companies closed, and opportunites arose.</description>
+    </item>
+    
+    <item>
+      <title>Messing with Lakka and a Chromebox</title>
+      <link>https://erickrdiaz.com/posts/messing-with-lakka-and-chromebox/</link>
+      <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/messing-with-lakka-and-chromebox/</guid>
+      <description>What to do One of the biggest issues I face when I get a new project-computer or toy is the dilemma of picking what to do with it. The computer itself is a blank slate; truly a paragon of hope, and possibility. It gets to the point where I get overwhelmed with all the choices I have. There are quite literally hundreds of projects that I drown in the fractals of choice.</description>
+    </item>
+    
+    <item>
+      <title>The Importance of Open Source</title>
+      <link>https://erickrdiaz.com/posts/importance-of-open-source/</link>
+      <pubDate>Thu, 04 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/importance-of-open-source/</guid>
+      <description>Free and Open Source Software Open source software is quickly becoming a necessary staple and cornerstone to software development itself and the advancement thereof. A recent(ish) study conducted by Black Duck Software (OSS logistics and legal problem solver) and North Bridge (venture capitalists that grow businesses) displayed just how important open source projects are becoming - at least in the corporate and business sphere. The aforementioned survey showed some pretty interesting results.</description>
+    </item>
+    
+    <item>
+      <title>On Practical Python Projects: A Case Study</title>
+      <link>https://erickrdiaz.com/posts/practical-python-projects-a-case-study/</link>
+      <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/practical-python-projects-a-case-study/</guid>
+      <description>Python&amp;rsquo;s Such a Pretty Language Revisiting old Python code is always such a treat. Its easy to see what was going on and what the code is actually doing. It is so simple to trace and read, rarely do I ever ask myself &amp;gt;What idiot wrote this?
+Only to later find out through a commit or comment that I was in fact the idiot burgeoning genius that wrote it.</description>
+    </item>
+    
+    <item>
+      <title>Spring Semester Reflections and Impressions</title>
+      <link>https://erickrdiaz.com/posts/spring-semester-reflections-and-impressions/</link>
+      <pubDate>Thu, 14 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/spring-semester-reflections-and-impressions/</guid>
+      <description>Reflections on the past few weeks For the past few weeks I have been immersing myself deeply in the essential core of my 5 classes and studying diligently day and night.
+Was that convincing enough? I hope so. Its what I keep telling myself that I&amp;rsquo;m doing.
+In reality I&amp;rsquo;ve been panicking, mentally sprinting to keep up, and trying to juggle work, school, and home life (buh-bye social life and hobbies!</description>
+    </item>
+    
+    <item>
+      <title>New Year, New Resolutions</title>
+      <link>https://erickrdiaz.com/posts/new-year-new-resolutions/</link>
+      <pubDate>Thu, 07 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/new-year-new-resolutions/</guid>
+      <description>And so, with barely a chance to anticipate and prepare for it, the new year is upon us. Entering a new year has always been a reflective process for me; Usually I&amp;rsquo;m filled with equal parts determination and excitement punctuated with a hint of personal, not self-loathing, maybe self-disappointment is a better word. The new year comes and I typically find myself looking at my year in review. Like most, my subconscious takes mental inventory of all the good, bad, and strange that may have happened throughout the year.</description>
+    </item>
+    
+    <item>
+      <title>On Games and Firsts: A Case Study</title>
+      <link>https://erickrdiaz.com/posts/on-games-and-firsts-a-case-study/</link>
+      <pubDate>Tue, 29 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/on-games-and-firsts-a-case-study/</guid>
+      <description>First posts deserve a look at my first projects, at least, that&amp;rsquo;s the line of thinking and reasoning that has been bouncing around my head for a bit. I shall declare this my First Case Study. The first class that had me cobble together an interactive, non-console, and non-trivial project was my web programming class. The class reinforced some concepts I already &amp;ldquo;knew&amp;rdquo; (basic HTML and DOM manipulation) and introduced me to stuff that was kinda magical (HTTP GET and POST requests, server vs client side storage, cookies, etc).</description>
+    </item>
+    
+    <item>
+      <title>Actually doing it</title>
+      <link>https://erickrdiaz.com/posts/actually-doing-it/</link>
+      <pubDate>Wed, 23 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/actually-doing-it/</guid>
+      <description>Hey! The name&amp;rsquo;s Erick. This is my initial foray into using Pelican as a way to manage a &amp;lsquo;blog&amp;rsquo;. I&amp;rsquo;ve always intended to start one up but never quite committed. I&amp;rsquo;ve built my own pseudo-blog in Django, I&amp;rsquo;ve dabbled with Ghost, and I have extensive experience using Wordpress to build sites for others; Django was great, but it was a bit heavy for what I was intending on doing. It seems like a great way to build an application (with a blog maybe tacked on).</description>
+    </item>
+    
+  </channel>
+</rss>

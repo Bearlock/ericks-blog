@@ -1,0 +1,579 @@
+<body>
+  <!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="" name="keywords">
+<meta content="Testing Cloud Functions - Robots Have Feelings" property="og:title">
+<title>Testing Cloud Functions | Robots Have Feelings</title>
+<link rel="stylesheet" href="https://erickrdiaz.com/css/style.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+
+
+  <section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://erickrdiaz.com/"><h1 class="title is-4">Robots Have Feelings</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          <a class="level-item nav-text" href="about">About</a>
+          
+          <a class="level-item" href="https://github.com/Bearlock">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://twitter.com/Bearlock_ed">
+            <span class="icon">
+              <i class="fa fa-twitter"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://www.linkedin.com/in/bearlock/">
+            <span class="icon">
+              <i class="fa fa-linkedin"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+  <section class="section">
+    <div class="container">
+      <div class="titlebox">
+        <h1 class="title">Testing Cloud Functions</h1>
+        <h2 class="subtitle is-6">September 15, 2017</h2>
+        
+      </div>
+      <div class="content">
+        
+
+<h5 id="click-me-firebase-cloud-functions-if-you-wanna-get-right-to-testing"><a href="#firebase-cloud-functions">Click me</a> if you wanna get right to testing</h5>
+
+<h2 id="it-is-now-2017">It is now 2017</h2>
+
+<p>Happy belated new year.</p>
+
+<p>Its been about nine months now. Change is constant and inevitable. In this year alone I have:</p>
+
+<ol>
+<li>Gotten a new and exciting job,</li>
+<li>Bought a beautiful dream-home, and</li>
+<li>Began wrapping up my last year of college</li>
+</ol>
+
+<p>Several big and life-altering changes.  Its sad to say, but writing here took a backseat to the other priorities in my life.  Heck, I can admit to not having lifted in a few months (nega-gainz are likely). But, now I&rsquo;m in a stable enough place now to get back to writing. I&rsquo;m exploring side projects, tech, and stuff that makes career-life fulfilling and fun.</p>
+
+<p>So there; a recap and explanation for another extended absence. You&rsquo;re probably curious about my new job though, right?</p>
+
+<h2 id="a-little-business-background">A little business background</h2>
+
+<p>I&rsquo;m gainfully employed at a startup(-ish?) company that makes <em>your</em> memories and coveted files <em>their</em> business. At its core <a href="https://www.yours.co">Yours.co</a> is a company dedicated to creating a sort of hard-copy deployment pipeline. One of our products is an archiving service. It takes your ephemeral files and writes them to a disc that gets delivered to your door (and sometimes stored in a vault). The other product is being advertised as a &lsquo;magic movie&rsquo; creation service. Again, you feed your special memories to us, and we give you back a packed box with a blu-ray of magic movies at it&rsquo;s heart.</p>
+
+<p>If this all seems like something that someone could given an afternoon, you&rsquo;re not wrong. The question is if this person could do this under the confines of quality, repeatability, and volume. That&rsquo;s where the beauty and the point of software become clear. Someone once said</p>
+
+<blockquote>
+<p>If you do it more than twice, automate it</p>
+</blockquote>
+
+<p>Software is about solving hard and mundane problems. Software (usually) <em>is</em> automation. And having to edit or save files to a disc day-in and day-out is a hard and mundane problem that should be automated.  On top of this, <a href="https://www.yours.co">Yours.co</a> offers two enhancements that make their service different. One is that we burn the files to a proprietary disc technology in the way of <a href="https://en.wikipedia.org/wiki/M-DISC">M-DISC</a>. The other is that we use machine-learning to create the magic movies.</p>
+
+<p>This little bit of background should provide some context to the work I&rsquo;m doing as well as help clarify my perspective. Let&rsquo;s move onto some code.</p>
+
+<h2 id="testing-an-informal-primer">Testing: an informal primer</h2>
+
+<p>From my (limited) experience people have certain feelings and assumptions about testing. I&rsquo;ll tell you two truths and a lie, and you&rsquo;ll try to guess the lie. Ready?</p>
+
+<ol>
+<li>Testing is necessary to producing <em>and maintaining</em> good quality software.</li>
+<li>Testing will refine and hone your logic and distill the way your code communicates with others. Which will in turn make you a more effective communicator and better programmer.</li>
+<li>Testing will eliminate <em>all</em> bugs from your code, platinum-certify your software causing your stock to skyrocket, your sales to triple-double, and your prestige as a developer and engineer to be known throughout the land; Alan Turing himself will step out from the vale of 0&rsquo;s and 1&rsquo;s and the realm of perfect functions, condescend to a state where you aren&rsquo;t blinded and burnt by his brilliance, and share with you the secrets of P = NP</li>
+</ol>
+
+<p>Did you guess the lie? I&rsquo;ll assume you did. Regardless of what some may lead you to believe, testing isn&rsquo;t the end all, be all to software development. Testing won&rsquo;t <em>guarantee</em> good code, easy maintenance, or zero bugs. However, testing <em>is</em> a vital and necessary tool to producing good and maintainable software. Software testing forces you to evaluate and examine your assumptions, goals, and limitations. Getting into a testing mindset immediately allows you to verify these assumptions. This in turn validates your goals, and probes your limitations, all before you even write your first test case.</p>
+
+<p>Besides technical introspection, software testing lends itself to writing repeatable, reusable, and <em>provably correct</em> software. At least, informally and pseudo-provably correct software. <a href="https://stackoverflow.com/questions/476959/why-cant-programs-be-proven">This is a good Stackoverflow conversation on provably correct software</a>. Repeatable, reusable, and &lsquo;correct&rsquo; code is often &lsquo;good&rsquo; and maintainable. But, it&rsquo;s important to remember that testing is a tool and needs to be applied on a case by case basis. If you&rsquo;re writing software for NASA or hospitals, testing rigor is paramount. If you&rsquo;re writing a simple CRUD app, do some good testing, but keep an eye singular to the glory of shipping your app.</p>
+
+<p>Finally, I could wax lyrical about being an effective communicator. I&rsquo;ll try to keep it brief. <strong>Being able to effectively communicate is the most important skill needed for success in life</strong>. Regardless of  situation, being able to speak and be understood, and being able to listen and understand gets you 90% of the way to success. Everything else is (necessary) gravy. Thus, if software testing fosters and improves communication and thought, it will also improve you as a programmer (and person).</p>
+
+<p>In summary, tests make for better logic, better software, and better people; get to testing!</p>
+
+<p>Now onto some actual code.</p>
+
+<p><a name="firebase-cloud-functions">
+  <h2>Firebase Cloud Functions</h3>
+</a></p>
+
+<p>If you don&rsquo;t know what Cloud Functions are, they&rsquo;re analogous to AWS&rsquo;s Lambda Functions; both are part of the whole <code>serverless</code> movement. If you don&rsquo;t know what that is, think of anything serverless as <code>[blank]-as-a-service</code>. Severless databases -&gt; databases-as-a-service, i.e Cloud/Lambda/Serverless functions -&gt; functions-as-a-service. You write functions, deploy them to Firebase servers, and trigger them with certain events. Combine these with Firebase&rsquo;s storage, real-time database, auth, and hosting. You&rsquo;ve got yourself the infrastructure for an API and frontends in less than two shakes.</p>
+
+<h3 id="test-setup">Test setup</h3>
+
+<p>Here is what my test setup and the test for that function look like:</p>
+
+<pre><code class="language-javascript">const chai = require('chai');
+const sinon = require('sinon');
+const chaiAsPromised = require('chai-as-promised');
+
+const assert = chai.assert;
+chai.use(chaiAsPromised);
+
+describe('Cloud Functions', () =&gt; {
+  let cloudFunctions, configStub, adminInitStub, functions, admin;
+
+  before(() =&gt; {
+    admin = require('firebase-admin');
+    adminInitStub = sinon.stub(admin, 'initializeApp')
+
+    functions = require('firebase-functions');
+    configStub = sinon.stub(functions, 'config').returns ({
+      firebase: {
+        apiKey: 'whatakey123',
+        authDomain: 'not-an-auth-domain.firebaseapp.com',
+        databaseURL: 'https://not-a-project.firebaseio.com',
+        projectId: 'not-a-project',
+        storageBucket: 'not-a-project.appspot.com',
+        messagingSendId: '123456'
+      },
+    });
+
+    cloudFunctions = require('../index');
+  });
+
+  after(() =&gt; {
+    configStub.restore();
+    adminInitStub.restore();
+  });
+</code></pre>
+
+<p><a href="https://firebase.google.com/docs/functions/unit-testing">I shamelessly got this from Firebase&rsquo;s docs.</a> As you can see, this sets up Chai (an assertion library), Sinon (a mocking library) and chai-as-promised (a Promise plugin for Chai). In this case Mocha is my test runner. If you&rsquo;ve used Mocha then you know it comes with a bunch of handy functions. <code>describe()</code> let&rsquo;s me structure my tests and set up a suite of sorts. I&rsquo;ve wrapped all my cloud functions in this first <code>describe()</code> block. My tests are structured in this way:</p>
+
+<pre><code>Cloud functions
+  captureUser
+    testcase1
+    testcase2
+    . . .
+  updateUsersAndPurchases
+    testcase1
+    testcase2
+    . . .
+  updateFilesAfterUpload
+    testcase1
+    testcase2
+    . . .
+End Cloud functions
+</code></pre>
+
+<p>I can nest <code>describe()</code>s inside each other, and then use Mocha&rsquo;s <code>it()</code> as my test case where <code>it()</code> describes some sort of expected behavior. The <code>before()</code> block above lets me manipulate some behavior and state before the tests get run. From the code above you can see that I&rsquo;m requiring <code>firebase-functions</code> and <code>firebase-admin</code> and stubbing them both out with Sinon. <code>adminInitStub = sinon.stub(admin, 'initializeApp')</code> is overriding <code>firebase-admin</code>&rsquo;s <code>initializeApp()</code> function with an empty stub. Right now it does nothing.</p>
+
+<pre><code>configStub = sinon.stub(functions, 'config').returns ({
+  firebase: {
+    apiKey: 'whatakey123',
+    authDomain: 'not-an-auth-domain.firebaseapp.com',
+    databaseURL: 'https://not-a-project.firebaseio.com',
+    projectId: 'not-a-project',
+    storageBucket: 'not-a-project.appspot.com',
+    messagingSendId: '123456'
+  },
+});
+</code></pre>
+
+<p>This block is overriding <code>firebase-functions</code> <code>config</code> function with a stub <em>and</em> I&rsquo;m telling that stub what to return. I&rsquo;m returning a fake Firebase config object. All of this is done because the code doesn&rsquo;t have access to a Firebase config when it isn&rsquo;t deployed to Firebase. If you recall, in the <code>captureUser()</code> code block there is a line <code>admin.initializeApp(functions.config().firebase);</code> that initializes the app with all the real Firebase config. I&rsquo;m overriding that behavior for testing purposes. After those behaviors get stubbed and mocked I can safely require my index file. The <code>after()</code> block uses <code>restore()</code> on the respective stubs to restore them to their default (pre-override) behavior.</p>
+
+<h3 id="tests">Tests</h3>
+
+<p>At Yours, we decided to use Firebase for quick mobile development and iteration. I dove right into writing a few of the cloud functions and as such, I also wanted the responsibility of writing their respective tests. This is what my first function, <code>captureUser()</code> looked like:</p>
+
+<pre><code class="language-javascript">const functions = require('firebase-functions');
+const admin = require('firebase-admin');
+
+admin.initializeApp(functions.config().firebase);
+
+exports.captureUser = functions.auth.user().onCreate((event) =&gt; {
+  const user = event.data;
+
+  const splitEmail = user.email.split('@');
+
+  // If for some reason google provides us with a weird string
+  // that isn't an email; Very weak check, but a check nonetheless
+  if(splitEmail[1] === undefined) {
+    console.log('Not an email?');
+    return;
+  }
+
+  const role = splitEmail[1] === 'yours.co' ? 'admin' : 'user';
+
+  return admin.database().ref(`users/${user.uid}`).set({
+    email: user.email,
+    name: user.displayName,
+    role,
+  });
+});
+</code></pre>
+
+<p>It triggers on a Firebase auth user creation event, <code>functions.auth.user().onCreate((event)</code>. Essentially <code>captureUser()</code> gets the user&rsquo;s data from <code>event.data</code>, does a weak check for a real email, assigns a user or admin role (admin if its a yours.co email account), and passes an object to <code>set()</code> to save the pertinent information to the real time database in the <code>users</code> collection . Pretty simple stuff.</p>
+
+<p>Wrapping my head around the tests didn&rsquo;t prove to be as simple. This was my first real foray into writing tests without someone looking over my shoulder and it was a little daunting. I learned that if I wanted to write tests without side-effects (writing to a database, making an api call, etc) I would have to stub out everything. AFter some intense study (thanks Google), I found out that there were three main things I had to stub out/consider:</p>
+
+<ol>
+<li>The event that triggers the function</li>
+<li>The data from the event (what I&rsquo;m acting upon)</li>
+<li>What exactly I&rsquo;m returning</li>
+</ol>
+
+<p>In this case, an <code>auth</code> event is our trigger. According to Firebase&rsquo;s docs an event is an object that at the very least has a <code>data</code> and <code>eventType</code>. The event objects differ in their data based on event type. I was going to be using an <code>auth</code> event object several times so I wrote a few helper functions to support that. First, <code>generateAuthEvent()</code>:</p>
+
+<pre><code class="language-javascript">function generateAuthEvent() {
+  return {
+    data: generateUserRecord(),
+    eventId: '123456-fake-id-string',
+    eventType: 'providers/firebase.auth/eventTypes/user.create',
+    resource: 'projects/fake-project-id',
+    notSupported: {},
+    params: {},
+    timestamp: new Date().toString()
+  };
+}
+</code></pre>
+
+<p>It just returns an fake/mocked object with an <code>auth</code> signature. The resulting data from an auth event is a user record:</p>
+
+<pre><code>function generateUserRecord() {
+  return {
+    uid: 'fake-uid',
+    email: 'fake@test.com',
+    password: 'faker',
+    displayName: 'Fake fakington',
+    photoURL: 'http://erickrdiaz.com/blog/images/avatar.jpg',
+    disabled: false,
+    emailVerified: false,
+  };
+}
+</code></pre>
+
+<p>This helper function also returns a fake object with a user record signature. These helper functions allowed me to mock out my first and second considerations, the triggering event and it&rsquo;s data. This is what my first test and test setup for <code>captureUser()</code> look like:</p>
+
+<pre><code class="language-javascript">describe('captureUser', () =&gt; {
+    let databaseStub;
+
+    before(() =&gt; {
+      databaseStub = sinon.stub(admin, 'database');
+    });
+
+    after(() =&gt; {
+      databaseStub.restore();
+    })
+
+    it('captures user info from an \'onCreate\' auth event, and stores it in the real time database', () =&gt; {
+      const fakeAuthEvent = generateAuthEvent();
+
+      const refStub = sinon.stub();
+      const setStub = sinon.stub();
+
+      databaseStub.returns({ ref: refStub });
+
+      const refParams = `users/${fakeAuthEvent.data.uid}`;
+
+      refStub.withArgs(refParams).returns({ set: setStub} );
+      setStub.returns(Promise.resolve({ ref: 'new_ref' }));
+
+      return assert.becomes(cloudFunctions.captureUser(fakeAuthEvent), { ref: 'new_ref' });
+    });
+</code></pre>
+
+<p>The return for <code>captureUser()</code> is:</p>
+
+<pre><code>return admin.database().ref(`users/${user.uid}`).set({
+  email: user.email,
+  name: user.displayName,
+  role,
+});
+</code></pre>
+
+<p>This next part is a dense line by line-ish explanation of what exactly I&rsquo;m doing in the code above.</p>
+
+<p>I need to stub out the <code>admin</code> object (done in the Cloud Functions <code>before()</code> block), <code>database()</code>, <code>ref()</code>, and <code>set()</code>. As you can see above I stub them out with <code>databaseStub = sinon.stub(admin, 'database');</code>, <code>const refStub = sinon.stub();</code>, and <code>const setStub = sinon.stub();</code>. The database function is supposed to return an object with a <code>ref</code> attribute. I override the function return with <code>databaseStub.returns({ ref: refStub })</code> to make it return the empty ref stub. <code>refParams</code> mocks out the database object the event is listening to. <code>ref()</code> called with <code>refParams</code> should return an object with a <code>set()</code> function, or in other words, <code>refStub.withArgs(refParams).returns({ set: setStub} );</code> <code>set()</code> returns a promise with a <code>ref</code> property so that also needs to be mocked here <code>setStub.returns(Promise.resolve({ ref: 'new_ref' }));</code>. Finally, the mocked-out and overriden <code>captureUser()</code> function can be asserted,  <code>return assert.becomes(cloudFunctions.captureUser(fakeAuthEvent), { ref: 'new_ref' });</code>, and thanks to <code>chai-as-promised</code>, I can assert on promises with  <code>becomes()</code>.</p>
+
+<p>Phew. That was a bit much, but luckily most of the tests follow a similar format. Here it is for your viewing pleasure:</p>
+
+<pre><code>const chai = require('chai');
+const sinon = require('sinon');
+const chaiAsPromised = require('chai-as-promised');
+
+const assert = chai.assert;
+chai.use(chaiAsPromised);
+
+describe('Cloud Functions', () =&gt; {
+  let cloudFunctions, configStub, adminInitStub, functions, admin;
+
+  before(() =&gt; {
+    admin = require('firebase-admin');
+    adminInitStub = sinon.stub(admin, 'initializeApp')
+
+    functions = require('firebase-functions');
+    configStub = sinon.stub(functions, 'config').returns ({
+      firebase: {
+        apiKey: 'whatakey123',
+        authDomain: 'not-an-auth-domain.firebaseapp.com',
+        databaseURL: 'https://not-a-project.firebaseio.com',
+        projectId: 'not-a-project',
+        storageBucket: 'not-a-project.appspot.com',
+        messagingSendId: '123456'
+      },
+    });
+
+    cloudFunctions = require('../index');
+  });
+
+  after(() =&gt; {
+    configStub.restore();
+    adminInitStub.restore();
+  });
+
+  describe('captureUser', () =&gt; {
+    let databaseStub;
+
+    before(() =&gt; {
+      databaseStub = sinon.stub(admin, 'database');
+    });
+
+    after(() =&gt; {
+      databaseStub.restore();
+    })
+
+    it('captures user info from an \'onCreate\' auth event, and stores it in the real time database', () =&gt; {
+      const fakeAuthEvent = generateAuthEvent();
+
+      const refStub = sinon.stub();
+      const setStub = sinon.stub();
+
+      databaseStub.returns({ ref: refStub });
+
+      const refParams = `users/${fakeAuthEvent.data.uid}`;
+
+      refStub.withArgs(refParams).returns({ set: setStub} );
+      setStub.returns(Promise.resolve({ ref: 'new_ref' }));
+
+      return assert.becomes(cloudFunctions.captureUser(fakeAuthEvent), { ref: 'new_ref' });
+    });
+
+    it('assigns a role of \'admin\' with a yours.co email address', () =&gt; {
+      const fakeAuthEvent = generateAuthEvent();
+      fakeAuthEvent.data.email = 'fake@yours.co';
+
+      const refStub = sinon.stub();
+      const setStub = sinon.stub();
+
+      databaseStub.returns({ ref: refStub });
+
+      const refParams = `users/${fakeAuthEvent.data.uid}`;
+      const setParams = {
+        name: fakeAuthEvent.data.displayName,
+        email: fakeAuthEvent.data.email,
+        role: 'admin',
+      };
+
+      refStub.withArgs(refParams).returns({ set: setStub} );
+      setStub.withArgs(setParams).returns(Promise.resolve({ ref: 'new_ref' }));
+
+      return assert.becomes(cloudFunctions.captureUser(fakeAuthEvent), { ref: 'new_ref' });
+    });
+
+    it('assigns a role of \'user\' with a non yours.co email address', () =&gt; {
+      const fakeAuthEvent = generateAuthEvent();
+      fakeAuthEvent.data.email = 'fake@notyours.com'
+
+      const refStub = sinon.stub();
+      const setStub = sinon.stub();
+
+      databaseStub.returns({ ref: refStub });
+
+      const refParams = `users/${fakeAuthEvent.data.uid}`;
+      const setParams = {
+        name: fakeAuthEvent.data.displayName,
+        email: fakeAuthEvent.data.email,
+        role: 'user',
+      };
+
+      refStub.withArgs(refParams).returns({ set: setStub} );
+      setStub.withArgs(setParams).returns(Promise.resolve({ ref: 'new_ref' }));
+
+      return assert.becomes(cloudFunctions.captureUser(fakeAuthEvent), { ref: 'new_ref' });
+    });
+
+    it('exits if a valid-ish email isn\'t provided', () =&gt; {
+      const fakeAuthEvent = generateAuthEvent();
+      fakeAuthEvent.data.email = 'lolwut-string';
+
+      return assert.eventually.equal(cloudFunctions.captureUser(fakeAuthEvent), undefined);
+    })
+  });
+
+  describe.skip('updateUserAndPurchases', () =&gt; {
+    const fakeUser = {
+      name: &quot;fake fakington&quot;,
+      email: &quot;fake@test.com&quot;
+    };
+
+    it('proliferates changes from the User collection to the corresponding Purchase', () =&gt; {
+      const fakeUsersAndPurchaseEvent = {
+        data: new functions.database.DeltaSnapShot(null, null, fakeUser, 'input', '/users/{uid}/{userKey}'),
+      };
+    });
+  });
+
+  describe('updateFilesAfterUpload', () =&gt; {
+    let databaseStub;
+
+    before(() =&gt; {
+      databaseStub = sinon.stub(admin, 'database');
+    });
+
+    after(() =&gt; {
+      databaseStub.restore();
+    })
+
+    it('writes to the \'Files\' db collection after a new upload event', () =&gt; {
+      const fileName = 'fakefile.jpg';
+      const fileEvent = generateFileEvent();
+
+      const refStub = sinon.stub();
+      const pushStub = sinon.stub();
+
+      databaseStub.returns({ ref: refStub });
+
+      const refParam = 'files/0001';
+      const pushParam = {
+        name: fileName,
+        timestamp: fileEvent.data.metadata.timeStamp,
+        fileType: fileEvent.data.contentType,
+        URL: fileEvent.data.mediaLink,
+      };
+
+      refStub.withArgs(refParam).returns({ push: pushStub });
+      pushStub.withArgs(pushParam).returns(Promise.resolve({ ref: 'new_ref'}));
+
+      return assert.becomes(cloudFunctions.updateFilesAfterUpload(fileEvent), { ref: 'new_ref' });
+    });
+
+    it('exits if a file is being deleted', () =&gt; {
+      const fileEvent = generateFileEvent();
+      fileEvent.data.resourceState = 'not_exists'
+
+      return assert.eventually.equal(cloudFunctions.updateFilesAfterUpload(fileEvent), undefined);
+    });
+
+    it('exits if the file being uploaded isn\'t a user\'s file', () =&gt; {
+      const fileEvent = generateFileEvent();
+      fileEvent.data.name = 'not/a/user/file';
+
+      return assert.eventually.equal(cloudFunctions.updateFilesAfterUpload(fileEvent), undefined);
+    });
+
+    it('exits if file exists but is not new and is only being triggered because of a metadata change.', () =&gt; {
+      const fileEvent = generateFileEvent();
+      fileEvent.data.metageneration = 2;
+
+      return assert.eventually.equal(cloudFunctions.updateFilesAfterUpload(fileEvent), undefined);
+    });
+  });
+});
+
+function generateFileEvent() {
+  return {
+    data: generateFileMeta(),
+    provider: 'providers/cloud.storage/eventTypes/object.change',
+    resource: 'projects/fake-project-id',
+    eventType: 'object.change'
+  };
+};
+
+function generateFileMeta() {
+  return {
+    kind: 'storage#object',
+    id: 'this-is-an-id-123',
+    resourceState: 'exists',
+    selfLink: 'somelink',
+    name: 'user/0001/fakefile.jpg',
+    bucket: 'fake-bucket',
+    generation: '1',
+    metageneration: '1',
+    contentType: 'image/jpg',
+    timeCreated: '2008-09-08T22:47:31-07:00',
+    updated: '2008-09-08T22:47:31-07:01',
+    timeDeleted: '2008-09-08T22:47:31-07:03',
+    storageClass: 'someclass',
+    size: '1234',
+    md5Hash: 'hashflavoredhash',
+    mediaLink: 'medialink.com',
+    contentEncoding: 'someEncoding',
+    contentDisposition: 'somedisposition',
+    contentLanguage: 'en-us',
+    cacheControl: '',
+    metadata: {
+      custom: 'metadata',
+      timeStamp: '1234',
+    },
+    crc32c: 'notherhash',
+    componentCount: '1',
+    customerEncryption: {
+      encryptionAlgorithm: 'crypto',
+      keySha256: 'shaencryption'
+    }
+  };
+}
+
+function generateUserRecord() {
+  return {
+    uid: 'fake-uid',
+    email: 'fake@test.com',
+    password: 'faker',
+    displayName: 'Fake fakington',
+    photoURL: 'https://lh4.googleusercontent.com/-ly98tZeA6F0/AAAAAAAAAAI/AAAAAAAAADk/G-1n2ID9bOw/photo.jpg?sz=64',
+    disabled: false,
+    emailVerified: false,
+  };
+}
+
+function generateAuthEvent() {
+  return {
+    data: generateUserRecord(),
+    eventId: '123456-fake-id-string',
+    eventType: 'providers/firebase.auth/eventTypes/user.create',
+    resource: 'projects/fake-project-id',
+    notSupported: {},
+    params: {},
+    timestamp: new Date().toString()
+  };
+}
+</code></pre>
+
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="section">
+  <div id="footy" class="container">
+    <h3><a href="https://erickrdiaz.com">¯\_(ツ)_/¯</a></h3>
+  </div>
+</section>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+</body>
