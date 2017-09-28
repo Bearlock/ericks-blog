@@ -1,3 +1,32 @@
 baseURL = "https://erickrdiaz.com"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Robots Have Feelings"
+theme = "hemingway2"
+description = "I write about software and stuff"
+keywords = [""]
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[params]
+footer = "¯\\_(ツ)_/¯"
+
+[params.highlight]
+style = "atom-one-dark"
+
+[[params.social]]
+url = "https://github.com/Bearlock"
+fa_icon = "fa-github"
+
+[[params.social]]
+url = "https://twitter.com/Bearlock_ed"
+fa_icon = "fa-twitter"
+
+[[params.social]]
+url = "https://www.linkedin.com/in/bearlock/"
+fa_icon = "fa-linkedin"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fa-rss"

@@ -1,0 +1,20 @@
+<body>
+  {{ partial "header" . }}
+  {{ partial "nav" . }}
+  <section class="section">
+    <div class="container">
+      <div class="titlebox">
+        <h1 class="title">{{ .Title }}</h1>
+        <h2 class="subtitle is-6">{{ .Date.Format "January 2, 2006" }}</h2>
+        {{ if .Params.tags }}
+        {{ partial "tags" .Params.tags }}
+        {{ end }}
+      </div>
+      <div class="content">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+  {{ partial "disqus" . }}
+  {{ partial "footer" . }}
+</body>
