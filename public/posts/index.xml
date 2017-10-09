@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Robots Have Feelings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Sep 2017 14:15:54 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 05 Oct 2017 09:01:14 -0600</lastBuildDate>
     
 	<atom:link href="https://erickrdiaz.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hacktoberfest Part 1</title>
+      <link>https://erickrdiaz.com/posts/hacktoberfest-part-1/</link>
+      <pubDate>Thu, 05 Oct 2017 09:01:14 -0600</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/hacktoberfest-part-1/</guid>
+      <description>Fall is here The weather is getting cooler; leaves are changing color, the wind is picking up, and people are cracking jokes about pumpkin spice lattes left and right. October is here, and with it,
+Hacktoberfest If you don&amp;rsquo;t know what that is, here is a short snippet from the official Hacktoberfest website
+ Hacktoberfest is a month-long celebration of open source software
+ Simple enough explanation. I decided to participate for a couple of reasons:</description>
+    </item>
     
     <item>
       <title>Testing Cloud Functions</title>

@@ -1,0 +1,347 @@
+<body>
+  <!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="" name="keywords">
+<meta content="Hacktoberfest Part 1 - Robots Have Feelings" property="og:title">
+<title>Hacktoberfest Part 1 | Robots Have Feelings</title>
+<link rel="stylesheet" href="https://erickrdiaz.com/css/style.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+
+
+  <section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://erickrdiaz.com/"><h1 class="title is-4">Robots Have Feelings</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          <a class="level-item nav-text" href="https://erickrdiaz.com/about">About</a>
+          
+          <a class="level-item" href="https://github.com/Bearlock">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://twitter.com/Bearlock_ed">
+            <span class="icon">
+              <i class="fa fa-twitter"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://www.linkedin.com/in/bearlock/">
+            <span class="icon">
+              <i class="fa fa-linkedin"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+  <section class="section">
+    <div class="container">
+      <div class="titlebox">
+        <h1 class="title">Hacktoberfest Part 1</h1>
+        <h2 class="subtitle is-6">October 5, 2017</h2>
+        
+      </div>
+      <div class="content">
+        
+
+<h2 id="fall-is-here">Fall is here</h2>
+
+<p>The weather is getting cooler; leaves are changing color, the wind is picking up, and people are cracking jokes about pumpkin spice lattes left and right. October is here, and with it,</p>
+
+<h2 id="hacktoberfest">Hacktoberfest</h2>
+
+<p><img src="/../images/hacktoberfest.png" alt="picture" /></p>
+
+<p>If you don&rsquo;t know what that is, here is a short snippet from the <a href="https://hacktoberfest.digitalocean.com/">official Hacktoberfest website</a></p>
+
+<blockquote>
+<p>Hacktoberfest is a month-long celebration of open source software</p>
+</blockquote>
+
+<p>Simple enough explanation. I decided to participate for a couple of reasons:</p>
+
+<ul>
+<li>I&rsquo;ve been using open source software since the beginning of my career; its nice to give back.</li>
+<li>Open source software is driven by community engagement; projects live or die because of engagement.</li>
+<li>Reading code is just as beneficial (if not more) as writing code; exposure to other code is a good learning experience.</li>
+<li>Having my code reviewed and scrutinized leads to better quality code; constructive critiques make me a better dev.</li>
+</ul>
+
+<p>All good and noble reasons but also if I open 4 pull requests I can get a free T-shirt&hellip; if I can&rsquo;t do that, I still get stickers.</p>
+
+<blockquote>
+<p>Support open source and earn a limited edition T-shirt.</p>
+</blockquote>
+
+<p>With all of this in mind I started to search around for projects I could  contribute to. This was a little difficult. I&rsquo;m a little shy and some projects feel like they are outside of the scope of my abilities. Not only that, but several of the <code>hacktoberfest</code> tagged projects were things I didn&rsquo;t use myself, and would take me a bit of time to ramp up; there were also several people already scrambling to grab those low hanging fruit. All of these obstacles conspired against me. I could&rsquo;ve pored through some docs and edited them for particular tools or frameworks, but since this was my first Hacktoberfest, I wanted to <code>*~*~make a difference~*~*</code>&trade;. Its at times like these that having friends or a community is nice. People within my circle probably/definitely had needs and I could help address them.</p>
+
+<h2 id="enter-rosa">Enter Rosa</h2>
+
+<p>Rosa is the brainchild/pet project of a <a href="https://twitter.com/tophat__">friend of mine</a>. He wanted to learn Ruby <em>and</em> use it in a real world setting. <code>Rosa</code> at its core is a homebrewed ticket/queue management system; I saw the old system, and Rosa is a million times better than the C++, C, and PHP franken-monster that they were using. Rosa works so well that his team unanimously ditched the old tool (aptly named Igor) and immediately started to use Rosa. To be honest, I&rsquo;m pretty proud. My buddy is a Linux systems wizard and genius by trade, and was able to code and push out a working tool into a production environment at his work, something traditionally outside of his wheelhouse.</p>
+
+<p>Rosa is great but code always has room for improvement. I do a lot of node/js at the current company I work at and thought I could improve on some of the javascript in Rosa. First thing I tried my hand at was improving <code>collapsible.js</code>; a little js utility to collapse and expand elements. My changes don&rsquo;t really alter functionality, but rather refactor the code from an imperative style to a more declarative style.</p>
+
+<h2 id="rosa-code">Rosa code</h2>
+
+<pre><code>// Function to allow for collapsible content
+function collapsible(idHash) {
+    $.each(idHash, function(key, value) {
+        var elements = $(document.getElementById(key)).next().children();
+        for (var i = 0; i &lt; elements.length; i++) {
+            var child = elements[i];
+            if(value){
+                child.style.display = '';
+            } else {
+                child.style.display = 'none';
+            }
+        }
+        if (!value){
+            $(document.getElementById(key)).append($('&lt;sup class=&quot;supersup&quot;&gt;collapsed&lt;/sup&gt;'));
+        } else {
+            $(document.getElementById(key)).find('sup').replaceWith('');
+        }
+    });
+}
+
+// Jquery to impliment collapse on proper click and with cookie
+document.addEventListener(&quot;page:change&quot;, function() {
+    if($('#collapsible').length){
+        idHash = {};
+        ids = [];
+        $(&quot;.collapsible&quot;).each(function() {
+            id = $(this).attr('id');
+            ids.push(id);
+        });
+        for (var i = 0; i &lt; ids.length; i++) {
+            var collapsibleIdCookie = readCookie(&quot;collapsibleId&quot; + ids[i]);
+            var expansionCookie = readCookie(&quot;expansion&quot; + ids[i]);
+            // convert cookie text back to boolean
+            if (expansionCookie == &quot;false&quot;){
+                expansion = false;
+            } else {
+                expansion = true;
+            }
+            if (collapsibleIdCookie){
+                idHash[collapsibleIdCookie] = expansion;
+            }
+        }
+        // make sure cookie exists then run through function with cookies
+        if (idHash){
+            collapsible(idHash);
+        }
+
+        $(&quot;.collapsible&quot;).click( function(){
+            idHash = {};
+            ids = [];
+            id = $(this).attr('id');
+            ids.push(id);
+            // setting cookies and toggling expansion
+            document.cookie = &quot;collapsibleId&quot; + id + &quot;=&quot; + id + &quot;;&quot;;
+            var expansionCookie = readCookie(&quot;expansion&quot; + id);
+            if (expansionCookie == &quot;false&quot;){
+                expansion = false;
+            } else {
+                expansion = true;
+            }
+                expansion = !expansion;
+                document.cookie = &quot;expansion&quot; + id + &quot;=&quot; + expansion + &quot;;&quot;;
+                idHash[id] = expansion;
+                collapsible(idHash);
+        });
+    }
+});
+</code></pre>
+
+<h3 id="right-away-there-were-a-few-things-i-honed-in-on">Right away there were a few things I honed in on:</h3>
+
+<ol>
+<li>Lots of flow of control statements (for loops, if-else, etc)</li>
+<li>String concatenation in a few places</li>
+<li>Attempts at parsing a string value and converting it to its boolean equivalent</li>
+</ol>
+
+<h3 id="why-i-wanted-to-change-those-things-above">Why I wanted to change those things above:</h3>
+
+<ol>
+<li><p>I don&rsquo;t really like for-loops; they&rsquo;re bug prone, there is a lot of boiler-plate code, and they&rsquo;re pretty imperative. Instead of telling the computer <strong>how</strong> to do something, we should be communicating to it <strong>what</strong> we want. Higher-order functions like maps are nice. <code>map()</code> iterates over each item in an array; in this case we can use it to side-effect stuff instead of for-loops. Also, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">conditionals/ternaries</a> are nice when you need to assign a value as a result of an if-else. Less boiler-plate.</p></li>
+
+<li><p>String concatenation is fine, but I&rsquo;ve gotten used to using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a> lately. They&rsquo;re more legible to me and you can do some cool stuff through <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings">tagging</a> them. Also, its easy for the concat (+) operator to become an addition operator if a quotation mark is forgotten somewhere, e.g <code>&quot;5&quot; + &quot;3&quot;</code> will return <code>&quot;53&quot;</code> but <code>5 + 3</code> will return <code>8</code>. Best to avoid the possibility all together.</p></li>
+
+<li><p>The main snippet of code I&rsquo;m addressing:</p></li>
+</ol>
+
+<pre><code>if (expansionCookie == &quot;false&quot;){
+    expansion = false;
+} else {
+    expansion = true;
+}
+</code></pre>
+
+<p>It feels&hellip; a little hacked together or incomplete; maybe unnecessary? If you don&rsquo;t know, Javascript has two main comparison operators <code>==</code> and <code>===</code>. <code>===</code> is a stricter comparison operator and usually the one recommended. <code>==</code> can do weird things if you&rsquo;re not expecting it or used to it, namely, coverting the operands on either sides to the same type. This is why <code>1 == &quot;1&quot;</code> returns true (type coversion) but <code>1 === &quot;1&quot;</code> returns false (strict comparison).</p>
+
+<h3 id="how-i-want-to-change-these-things">How I want to change these things</h3>
+
+<p>First, as I indicated above, I replaced all the for-loops with maps and some of the if-else assignment blocks into conditionals. We go from this:</p>
+
+<pre><code>for (var i = 0; i &lt; elements.length; i++) {
+    var child = elements[i];
+    if(value){
+        child.style.display = '';
+    } else {
+        child.style.display = 'none';
+    }
+ }
+</code></pre>
+
+<p>to this:</p>
+
+<pre><code>// Use 'map' to iterate over elements instead of for-loop and use ternaries to assign conditional values
+elements.map((element) =&gt; {
+    value ? element.style.display = '' : element.style.display = 'none'
+});
+</code></pre>
+
+<p>A little shorter and hopefully a little more legible.</p>
+
+<p>Secondly, All the template literals. We go from this:</p>
+
+<pre><code>document.cookie = &quot;collapsibleId&quot; + id + &quot;=&quot; + id + &quot;;&quot;;
+</code></pre>
+
+<p>to this:</p>
+
+<pre><code>document.cookie = `collapsibleId${id}=${id};`;
+</code></pre>
+
+<p>This change is a little more compact, but still a little rough to read in my opinion; probably because of the sequential semi-colons at the end.</p>
+
+<p>Lastly, I decided to break this out into its own function. The code above is merely doing that coversion, assigning it to a variable, and using that variable somewhere else. A function can encapsulate that behavior and just return the right boolean value.</p>
+
+<p>We go from this:</p>
+
+<pre><code>if (expansionCookie == &quot;false&quot;){
+    expansion = false;
+} else {
+    expansion = true;
+}
+</code></pre>
+
+<p>to this:</p>
+
+<pre><code>function parseBool(stringVal) {
+    return !(stringVal === false || stringVal === &quot;false&quot;)
+}
+</code></pre>
+
+<p>Hooray reusability. Essentially if the passed in value is <code>false</code> or <code>&quot;false&quot;</code> this will return <code>false</code>! Anything else and it&rsquo;ll return true so its best to program contractually and ensure the value being passed in is indeed a boolean or &ldquo;true&rdquo;/&ldquo;false&rdquo;.</p>
+
+<p>There&rsquo;s a few other things I changed, here is the body of my pull request:</p>
+
+<pre><code># What this changes
+This pull request is mostly a refactor; doesn't change the business logic or end result, but it does change how we get there. Some notable changes are:
+
+- The introduction of [arrow functions](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/) syntax 
+- Eliminating for-loops in favor of `map()` [Click here for a good explanation why](https://jamison.dance/11-06-2015/dont-write-for-loops)
+- Writing a `parseBool()` function that will evaluate `false` or `&quot;false&quot;` and return... false if true.
+- Using jQuery when dealing when manipulating DOM or listening to events (Note: could probably change `document.addEventListener` to `$(document).on(&quot;page:change&quot;, function() {})`)
+- [Conditionals/Ternaries](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) to assign conditional values
+- [Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) instead of string concatenation
+
+and a smattering of others. 
+</code></pre>
+
+<p>And here is the rest of my code:</p>
+
+<pre><code>// Function to allow for collapsible content
+function collapsible(idHash) {
+    $.each(idHash, (key, value) =&gt; {
+        let elements = $(`#${key}`).next().children();
+
+        // Use 'map' to iterate over elements instead of for-loop and use ternaries to assign conditional values
+        elements.map((element) =&gt; {
+            value ? element.style.display = '' : element.style.display = 'none'
+        });
+
+        value ? $(`#${key}`).find('sup').replaceWith('') : $(`#${key}`).append($('&lt;sup class=&quot;supersup&quot;&gt;collapses&lt;/sup&gt;'));
+    });
+}
+
+// Parses some value; if its &quot;false&quot; (string) or false (boolean) returns false
+function parseBool(stringVal) {
+    return !(stringVal === false || stringVal === &quot;false&quot;)
+}
+
+// Jquery to implement collapse on proper click and with cookie
+document.addEventListener(&quot;page:change&quot;, function() {
+    if($('#collapsible').length){
+        let idHash = {};
+        let ids = [];
+        let id;
+
+        $(&quot;.collapsible&quot;).each(function() {
+            id = $(this).attr('id');
+            ids.push(id);
+        });
+
+        ids.map((singleId) =&gt; {
+            let collapsibleIdCookie;
+            let expansion = parseBool(readCookie(`expansion${singleId}`));
+            if (collapsibleIdCookie = readCookie(`collapsibleId${singleId}`))  idHash[collapsibleIdCookie] = expansion; 
+        });
+        
+        if (idHash) collapsible(idHash);
+
+        $(&quot;.collapsible&quot;).click( function(){
+            idHash = {};
+            ids = [];
+            id = $(this).attr('id');
+            ids.push(id);
+
+            // setting cookies and toggling expansion
+            document.cookie = `collapsibleId${id}=${id};`;
+            expansion != parseBool(readCookie(`expansion ${id}`));
+
+            document.cookie = `expansion${id}=${expansion};`;
+            idHash[id] = expansion;
+            collapsible(idHash);
+        });
+    }
+});
+</code></pre>
+
+<p>I think this was a success. I learned much about my friend&rsquo;s code, I feel like I made meaningful changes, and it has convinced me that I should work on other parts of Rosa.</p>
+
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="section">
+  <div id="footy" class="container">
+    <h3><a href="https://erickrdiaz.com">¯\_(ツ)_/¯</a></h3>
+  </div>
+</section>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+</body>
