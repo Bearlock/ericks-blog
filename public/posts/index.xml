@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Robots Have Feelings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Oct 2017 09:01:14 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 16 Oct 2017 09:38:46 -0600</lastBuildDate>
     
 	<atom:link href="https://erickrdiaz.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dabbling in C&#43;&#43; Again</title>
+      <link>https://erickrdiaz.com/posts/dabbling-in-c&#43;&#43;-again/</link>
+      <pubDate>Mon, 16 Oct 2017 09:38:46 -0600</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/dabbling-in-c&#43;&#43;-again/</guid>
+      <description>C++ is weird Some people love it and others would rather remove their fingernails with pliers than program in it. I find myself falling in both camps; sometimes at the same time. I have an inkling that my software engineering journey has a lot to do with my feelings towards it. C++ is my&amp;hellip; educational progenitor language maybe? Essentially I was forced to use it all throughout my university experience.</description>
+    </item>
     
     <item>
       <title>Hacktoberfest Part 1</title>
