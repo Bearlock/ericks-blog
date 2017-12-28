@@ -3,7 +3,6 @@ title: "Firebase Push Notifications"
 date: 2017-12-26T12:35:31-07:00
 slug: "firebase-push-notifications"
 type: post
-draft: true
 ---
 
 ## Principles and Patterns
