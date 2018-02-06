@@ -3,7 +3,6 @@ title: "What I Like About Node"
 date: 2018-01-31T18:25:58-07:00
 slug: "what-I-like-about-node"
 type: post
-draft: true
 ---
 
 ## I Dig Node

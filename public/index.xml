@@ -6,10 +6,19 @@
     <description>Recent content on Robots Have Feelings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Dec 2017 12:35:31 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jan 2018 18:25:58 -0700</lastBuildDate>
     
 	<atom:link href="https://erickrdiaz.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What I Like About Node</title>
+      <link>https://erickrdiaz.com/posts/what-i-like-about-node/</link>
+      <pubDate>Wed, 31 Jan 2018 18:25:58 -0700</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/what-i-like-about-node/</guid>
+      <description>I Dig Node I remember when I was a fledgling programmer and Node was something I had just learned about; I remember thinking &amp;ldquo;Server-side Javascript? That sounds like the worst thing ever&amp;rdquo;. After tinkering with it and working with it professionally for about a year, I had a change of heart. Node fulfills a specific niche on the web, and it does the job well. Critics will often point to Node&amp;rsquo;s error-handling capabilites, single-threadedness, type-safety (and other JS specific issues) as deal-breakers.</description>
+    </item>
     
     <item>
       <title>Firebase Push Notifications</title>
