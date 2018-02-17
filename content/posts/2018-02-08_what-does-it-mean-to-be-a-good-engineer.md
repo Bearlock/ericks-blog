@@ -1,7 +1,7 @@
 ---
 title: "What  Does It Mean to Be a Good Engineer"
 date: 2018-02-08T14:13:17-07:00
-slug: ""
+slug: "what-does-it-mean-to-be-a-good-engineer"
 type: post
 ---
 
