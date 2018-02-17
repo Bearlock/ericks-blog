@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Robots Have Feelings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 Jan 2018 18:25:58 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 08 Feb 2018 14:13:17 -0700</lastBuildDate>
     
 	<atom:link href="https://erickrdiaz.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What  Does It Mean to Be a Good Engineer</title>
+      <link>https://erickrdiaz.com/posts/2018-02-08_what-does-it-mean-to-be-a-good-engineer/</link>
+      <pubDate>Thu, 08 Feb 2018 14:13:17 -0700</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/2018-02-08_what-does-it-mean-to-be-a-good-engineer/</guid>
+      <description>What Does It Mean to Be a Good Engineer? This is a loaded question; it hounds me in times of self-doubt. It&amp;rsquo;s often followed by the question, &amp;ldquo;am I a good engineer?&amp;rdquo;. Honestly, I already grapple with the concept and definition of the word &amp;ldquo;good&amp;rdquo;. To deconstruct what it could mean to be a &amp;ldquo;good engineer&amp;rdquo; is beyond me. I like to sit and think I&amp;rsquo;m a good engineer, that I do good by my title and by the things I achieve.</description>
+    </item>
     
     <item>
       <title>What I Like About Node</title>
@@ -17,7 +26,7 @@
       <pubDate>Wed, 31 Jan 2018 18:25:58 -0700</pubDate>
       
       <guid>https://erickrdiaz.com/posts/what-i-like-about-node/</guid>
-      <description>I Dig Node I remember when I was a fledgling programmer and Node was something I had just learned about; I remember thinking &amp;ldquo;Server-side Javascript? That sounds like the worst thing ever&amp;rdquo;. After tinkering with it and working with it professionally for about a year, I had a change of heart. Node fulfills a specific niche on the web, and it does the job well. Critics will often point to Node&amp;rsquo;s error-handling capabilites, single-threadedness, type-safety (and other JS specific issues) as deal-breakers.</description>
+      <description>I Dig Node I remember when I was a fledgling programmer and Node was something I had just learned about; I remember thinking &amp;ldquo;Server side Javascript? That sounds like the worst thing ever&amp;rdquo;. After tinkering with it and working with it professionally for about a year, I had a change of heart. Node fulfills a specific niche on the web, and it does the job well. Critics will often point to Node&amp;rsquo;s error handling capabilities, single-threadedness, type safety (and other JS specific issues) as deal breakers.</description>
     </item>
     
     <item>
@@ -59,7 +68,7 @@ Hacktoberfest If you don&amp;rsquo;t know what that is, here is a short snippet 
       <guid>https://erickrdiaz.com/posts/testing-cloud-functions/</guid>
       <description>Click me if you wanna get right to testing It is now 2017 Happy belated new year.
 Its been about nine months now. Change is constant and inevitable. In this year alone I have:
- Gotten a new and exciting job, Bought a beautiful dream-home, and Began wrapping up my last year of college  Several big and life-altering changes. Its sad to say, but writing here took a backseat to the other priorities in my life.</description>
+ Gotten a new and exciting job, Bought a beautiful dream home, and Began wrapping up my last year of college  Several big and life altering changes. Its sad to say, but writing here took a backseat to the other priorities in my life.</description>
     </item>
     
     <item>
@@ -77,7 +86,7 @@ Its been about nine months now. Change is constant and inevitable. In this year 
       <pubDate>Wed, 29 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://erickrdiaz.com/posts/a-status-update/</guid>
-      <description>Whoa, hey It&amp;rsquo;s been a while right? I barely recognize you (or myself). It&amp;rsquo;s been about four months now with nary an update or peep out of me. Not really good attendance. To be honest, I feel a bit guilty. Not too guilty mind you &amp;ndash; just a bit. Life has been more unexpected than I expected. Things came up, things happened, balls were dropped, mistakes were made, assignments were overdue, vacations were had, companies closed, and opportunites arose.</description>
+      <description>Whoa, hey It&amp;rsquo;s been a while right? I barely recognize you (or myself). It&amp;rsquo;s been about four months now with nary an update or peep out of me. Not really good attendance. To be honest, I feel a bit guilty. Not too guilty mind you &amp;ndash; just a bit. Life has been more unexpected than I expected. Things came up, things happened, balls were dropped, mistakes were made, assignments were overdue, vacations were had, companies closed, and opportunities arose.</description>
     </item>
     
     <item>

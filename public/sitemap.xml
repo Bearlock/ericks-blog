@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://erickrdiaz.com/posts/2018-02-08_what-does-it-mean-to-be-a-good-engineer/</loc>
+    <lastmod>2018-02-08T14:13:17-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://erickrdiaz.com/posts/what-i-like-about-node/</loc>
     <lastmod>2018-01-31T18:25:58-07:00</lastmod>
   </url>
@@ -84,13 +89,13 @@
   
   <url>
     <loc>https://erickrdiaz.com/posts/</loc>
-    <lastmod>2018-01-31T18:25:58-07:00</lastmod>
+    <lastmod>2018-02-08T14:13:17-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://erickrdiaz.com/</loc>
-    <lastmod>2018-01-31T18:25:58-07:00</lastmod>
+    <lastmod>2018-02-08T14:13:17-07:00</lastmod>
     <priority>0</priority>
   </url>
   

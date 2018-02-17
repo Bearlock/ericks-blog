@@ -15,10 +15,10 @@ Happy belated new year.
 Its been about nine months now. Change is constant and inevitable. In this year alone I have:
 
 1. Gotten a new and exciting job,
-2. Bought a beautiful dream-home, and
+2. Bought a beautiful dream home, and
 3. Began wrapping up my last year of college
 
-Several big and life-altering changes.  Its sad to say, but writing here took a backseat to the other priorities in my life.  Heck, I can admit to not having lifted in a few months (nega-gainz are likely). But, now I'm in a stable enough place now to get back to writing. I'm exploring side projects, tech, and stuff that makes career-life fulfilling and fun.
+Several big and life altering changes.  Its sad to say, but writing here took a backseat to the other priorities in my life.  Heck, I can admit to not having lifted in a few months (nega-gainz are likely). But, now I'm in a stable enough place now to get back to writing. I'm exploring side projects, tech, and stuff that makes career-life fulfilling and fun.
 
 So there; a recap and explanation for another extended absence. You're probably curious about my new job though, right?
 
@@ -30,7 +30,7 @@ If this all seems like something that someone could given an afternoon, you're n
 
 > If you do it more than twice, automate it
 
-Software is about solving hard and mundane problems. Software (usually) _is_ automation. And having to edit or save files to a disc day-in and day-out is a hard and mundane problem that should be automated.  On top of this, [Yours.co](https://www.yours.co) offers two enhancements that make their service different. One is that we burn the files to a proprietary disc technology in the way of [M-DISC](https://en.wikipedia.org/wiki/M-DISC). The other is that we use machine-learning to create the magic movies.
+Software is about solving hard and mundane problems. Software (usually) _is_ automation. And having to edit or save files to a disc day-in and day-out is a hard and mundane problem that should be automated.  On top of this, [Yours.co](https://www.yours.co) offers two enhancements that make their service different. One is that we burn the files to a proprietary disc technology in the way of [M-DISC](https://en.wikipedia.org/wiki/M-DISC). The other is that we use machine learning to create the magic movies.
 
 This little bit of background should provide some context to the work I'm doing as well as help clarify my perspective. Let's move onto some code.
 

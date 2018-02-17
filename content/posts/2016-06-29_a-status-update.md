@@ -8,7 +8,7 @@ type: post
 
 ## Whoa, hey
 
-It's been a while right? I barely recognize you (or myself). It's been about four months now with nary an update or peep out of me. Not really good attendance. To be honest, I feel a bit guilty. Not too guilty mind you -- just a bit. Life has been more unexpected than I expected. Things came up, things happened, balls were dropped, mistakes were made, assignments were overdue, vacations were had, companies closed, and opportunites arose.
+It's been a while right? I barely recognize you (or myself). It's been about four months now with nary an update or peep out of me. Not really good attendance. To be honest, I feel a bit guilty. Not too guilty mind you -- just a bit. Life has been more unexpected than I expected. Things came up, things happened, balls were dropped, mistakes were made, assignments were overdue, vacations were had, companies closed, and opportunities arose.
 
 ### It's been a heck of a ride.
 

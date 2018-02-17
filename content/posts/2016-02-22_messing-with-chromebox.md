@@ -95,8 +95,8 @@ Its installed! Everything worked out in my favor this time. I didn't have to spe
 [kodichrome]: http://kodi.wiki/view/Chromebox
 [chromeguts]: http://kodi.wiki/images/thumb/a/a5/Inside-chrome1.jpg/590px-Inside-chrome1.jpg
 [hackernews]: https://news.ycombinator.com/item?id=10834214
-[chromeosdevconsole]: https://erickrdiaz.com/images/chromeosdevconsole.jpg
-[EZscriptcurl]: https://erickrdiaz.com/images/EZscriptcurl.jpg
+[chromeosdevconsole]: /images/chromeosdevconsole.jpg
+[EZscriptcurl]: /images/EZscriptcurl.jpg
 [kodiscript]: https://dl.dropboxusercontent.com/u/98309225/cbox-menu.png
-[lakkainstall]: https://erickrdiaz.com/images/lakkainstall.jpg
-[lakkagui]: https://erickrdiaz.com/images/lakkagui.jpg
+[lakkainstall]: /images/lakkainstall.jpg
+[lakkagui]: /images/lakkagui.jpg
