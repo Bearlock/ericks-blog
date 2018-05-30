@@ -1,0 +1,588 @@
+<body>
+  <!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="" name="keywords">
+<meta content="Vue, Jest, and Netlify - Robots Have Feelings" property="og:title">
+<title>Vue, Jest, and Netlify | Robots Have Feelings</title>
+<link rel="stylesheet" href="https://erickrdiaz.com/css/style.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+
+
+  <section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://erickrdiaz.com/"><h1 class="title is-4">Robots Have Feelings</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          <a class="level-item nav-text" href="https://erickrdiaz.com/about">About</a>
+          
+          <a class="level-item" href="https://github.com/Bearlock">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://twitter.com/Bearlock_ed">
+            <span class="icon">
+              <i class="fa fa-twitter"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://www.linkedin.com/in/bearlock/">
+            <span class="icon">
+              <i class="fa fa-linkedin"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+  <section class="section">
+    <div class="container">
+      <div class="titlebox">
+        <h1 class="title">Vue, Jest, and Netlify</h1>
+        <h2 class="subtitle is-6">May 29, 2018</h2>
+        
+      </div>
+      <div class="content">
+        
+
+<h2 id="frontend-programming-is-hard">Frontend programming is hard</h2>
+
+<p>Frontend programming is difficult to do rigorously. It&rsquo;s too easy to cobble together some frontend code that kinda works. Crafting a good user experience with a coherent UI is a craft and a science. And to be honest, a good UX/UI usually makes or breaks a product. The word often tossed around in regards to a good UI is &ldquo;delightful&rdquo;. A quick Google search yields the following definition for delight:</p>
+
+<blockquote>
+<p><em>verb</em>: to please greatly<br />
+<em>noun</em>: great pleasure</p>
+</blockquote>
+
+<p>UI/UX design is imperative. Regardless of who the audience or customer is, there <strong>is</strong> an audience or customer. A frontend acts as an ambassador, guide, and interface to a brand, to philosophies, or to empowerment.</p>
+
+<h5 id="also-p-s-if-you-wanna-skip-me-waxing-lyrical-about-stuff-feel-free-to-check-my-config-files-here-anyway-have-some-config-if-you-want-to-see-some-vue-and-jest-tests-in-action-go-here-some-supplemental-material">Also P.S, if you wanna skip me waxing lyrical about stuff, feel free to check my config files <a href="#anyway-have-some-config">here</a>. If you want to see some Vue and Jest tests in action go <a href="#some-supplemental-material">here</a>.</h5>
+
+<h2 id="a-good-ui-makes-you-feel-good">A good UI makes you feel good</h2>
+
+<p>Right away, the word <em>delight</em> indicates an emotional connection. To me, there has also always been a connotation of surprise tacked onto the feeling of delight. Delight is a genuine (and maybe unexpected) smile. Software devs sometimes lose sight of form in the form-function dichotomy. Form and function need to complement each other. Harmony in form and function is rare, and rarer still is a delightful product experience. These ideas and concepts fall squarely into design territory, but can&rsquo;t be ignored. Rather, developers need to adapt the learned concepts and standards inherent in the field of design and apply them to software. But, even knowing good design principles and applying them doesn&rsquo;t make the work any easier. It just makes it better.</p>
+
+<h2 id="vue-helps-a-little">Vue helps a little</h2>
+
+<p>Good frontend programming is harder. Not just the design aspect of it, but all of it. Between frameworks, tooling, libraries, browser compatiblity, mobile responsiveness, accessibility, testing, etc. It can get overwhelming. The (&ldquo;new&rdquo;) hotness in frontend programming is component-based programming. I love the OO principle of <code>favoring composition over inheritance</code>, so I drank deep from this kool-aid. We use <a href="https://vuejs.org/">Vue</a> where I work, but I would be just as happy using other component-based vehicles (<a href="https://reactjs.org/">React</a>, <a href="https://mithril.js.org/">mithril</a>). There are pros and cons to Vue, but as a framework it enables me to evaluate my design choices. This isn&rsquo;t to say I write good frontend code (I don&rsquo;t), but I&rsquo;m learning to make good design decisions and considerations. Effective tools are those that make doing the right thing, the easy thing.</p>
+
+<h2 id="jest-helps-some-too">Jest helps some too</h2>
+
+<p>I&rsquo;ve never done any sort of frontend testing. It was a little intimidating, but reading up on (and using) <a href="https://facebook.github.io/jest/en/">Jest</a> and the <a href="https://vue-test-utils.vuejs.org/">Vue test utils</a> made it a little more manageable. There was a learning curve as well as some configuration that wasn&rsquo;t the easiest to figure out. Once the work was done and a testing pattern/template established it became much easier.</p>
+
+<p>My favorite thing about Jest is how out-of-the-box everything is. I&rsquo;m used to a setup like the following:</p>
+
+<ul>
+<li>Mocha as my test runner</li>
+<li>Chai for BDD assertions</li>
+<li>Sinon for mocking</li>
+<li>SinonChai for some syntatic sugar</li>
+<li>Proxyquire for injecting my own mocked dependencies</li>
+<li>Nyc for test coverage/reporting</li>
+<li>Probably some other stuff I&rsquo;m forgetting</li>
+</ul>
+
+<p>Managing that many dependencies can become a pain and unruly quickly. Jest gives me all of the above functionality as well as some other bells and whistles (asynchronous test suites are nice, snapshot tests are cool!).</p>
+
+<p>The Vue Test Utils library was also essential for my testing process because of how easily it let me manipulate and do things within the scope of Vue. Making my own fake Vue instance, rendering Vue code on the fly, etc. All of that helped me write coherent tests.</p>
+
+<h2 id="netlify-completes-the-stack">Netlify completes the stack</h2>
+
+<p>From an Ops perspective, <a href="https://www.netlify.com/">Netlify</a> is the bees knees. TravisCi + Netlify is exceeding my CI/CD needs and expectations. TravisCi runs and verifies my builds while Netlify gives me deploy previews(!!), branch deploys, and other things I never knew I needed. I&rsquo;ve been digging this pattern because Travis can give me automated unit and integration testing insights while Netlify can help me leverage frictionless acceptance testing from stakeholders. It&rsquo;s everything I want out of a deployment pipeline.</p>
+
+<h2 id="anyway-have-some-config">Anyway, have some config</h2>
+
+<p>The hardest part of figuring all of this out was figuring out the right incantations, er, config settings. So here is my current setup.</p>
+
+<h3 id="travis-yml">.travis.yml</h3>
+
+<p>This is a pretty stupid simple Travis config. It runs stuff using yarn/node, it doesn&rsquo;t email me, and it posts stuff into our company bot channel.</p>
+
+<pre><code>language: node_js
+node_js:
+- 9.0.0
+
+install: yarn
+script: yarn run test
+notifications:
+  email: false
+  slack:
+    secure: [some-token-here]
+</code></pre>
+
+<h3 id="package-json-partial">package.json (partial)</h3>
+
+<p>This is a partial package.json. This whole project was  init&rsquo;ed using Vue CLI 3 and the build scripts reflect that.</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;some-app&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;private&quot;: &quot;maybe&quot;,
+  &quot;scripts&quot;: {
+    &quot;serve&quot;: &quot;vue-cli-service serve --open&quot;,
+    &quot;prod-build&quot;: &quot;vue-cli-service build&quot;,
+    &quot;stage-build&quot;: &quot;vue-cli-service build --mode staging&quot;,
+    &quot;dev-build&quot;: &quot;vue-cli-service build --mode development&quot;,
+    &quot;test&quot;: &quot;vue-cli-service test --env=jsdom --browser&quot;,
+    &quot;lint&quot;: &quot;vue-cli-service lint&quot;,
+    &quot;lint:fix&quot;: &quot;eslint --fix src/**/*.js&quot;,
+    &quot;updateSnap&quot;: &quot;vue-cli-service test --updateSnapshot&quot;
+  },
+  &quot;dependencies&quot;: {
+    . . .
+    &quot;@vue/cli-plugin-unit-jest&quot;: &quot;^3.0.0-beta.6&quot;,
+    &quot;vue&quot;: &quot;^2.5.13&quot;,
+    &quot;vue-router&quot;: &quot;^3.0.1&quot;,
+    &quot;vuex&quot;: &quot;^3.0.1&quot;
+    . . .
+  },
+  &quot;devDependencies&quot;: {
+    . . .
+    &quot;@vue/cli-plugin-babel&quot;: &quot;^3.0.0-beta.6&quot;,
+    &quot;@vue/cli-plugin-eslint&quot;: &quot;^3.0.0-beta.6&quot;,
+    &quot;@vue/cli-service&quot;: &quot;^3.0.0-beta.6&quot;,
+    &quot;@vue/test-utils&quot;: &quot;^1.0.0-beta.13&quot;,
+    &quot;babel-core&quot;: &quot;^7.0.0-0&quot;,
+    &quot;babel-jest&quot;: &quot;^22.0.4&quot;,
+    &quot;jest&quot;: &quot;^22.4.3&quot;,
+    &quot;vue-server-renderer&quot;: &quot;^2.5.16&quot;,
+    . . .
+  },
+  &quot;babel&quot;: {
+    &quot;presets&quot;: [
+      &quot;@vue/app&quot;
+    ]
+  },
+  &quot;postcss&quot;: {
+    &quot;plugins&quot;: {
+      &quot;autoprefixer&quot;: {}
+    }
+  }
+}
+</code></pre>
+
+<h3 id="netlify-toml">netlify.toml</h3>
+
+<p>This is the Netlify config file. Before this, I&rsquo;d never even heard of <code>.toml</code>. The comments explain stuff nicely.</p>
+
+<pre><code class="language-toml">[Settings]
+  ID = &quot;some-netlify-id&quot;
+
+# Settings in the [build] context are global and are applied 
+# to all contexts unless overridden by more specific contexts.
+
+# Everything publishes to the 'dist' directory, so it isn't
+# necessary to specify a 'publish' directory in specific contexts
+
+# Check out all the .toml options here: https://www.netlify.com/docs/netlify-toml-reference/
+# Anything in this file will override any settings set in the netlify site
+
+[build] # default context
+  # This is where netlify will look for a package.json
+  base = &quot;&quot;
+
+  # This is the finished build directory
+  publish = &quot;dist&quot;
+
+  # This is the default build command (overridden in more specific contexts)
+  command = &quot;yarn run dev-build&quot;
+
+  # This is where netlify will look for any lambda functions
+  functions = &quot;&quot;
+
+[context.production]
+  command = &quot;yarn run prod-build&quot;
+  
+[context.deploy-preview]
+  command = &quot;yarn run dev-build&quot;
+
+[context.master] # master branch _is_ the dev build/branch
+  command = &quot;yarn run dev-build&quot;
+
+[context.staging]
+  command = &quot;yarn run stage-build&quot;
+</code></pre>
+
+<h3 id="jest-config-js">jest.config.js</h3>
+
+<p>This sets up Jest. We tell it to collect coverage, what to collect coverage from, what files to test, what to transform with what, what to do with certain file types, etc. One stop shop for Jest.</p>
+
+<p>Really, the most important things on here are the <code>transform</code> section and the <code>moduleNameMapper</code> section. The transform section transpiles files with a <code>.vue</code> extension using the <code>vue-jest</code> package (Jest doesn&rsquo;t know what to do with Vue out of the box), and it transpiles <code>.jsx</code> files using <code>babel-jest</code> (for a similar reason).</p>
+
+<p>The mapper below is nifty for mocking static assets. Jest tests get weird if they don&rsquo;t know what to do with certain file types. That super long regex below matches any static file type (that I&rsquo;ve bothered to mention) and mocks it using my <code>filesMock.js</code>. That file is a one liner, looks like this: <code>module.exports = &quot;test-file-stub&quot;;</code>. <code>stylesMock</code> is similar for similar reasons: <code>module.exports = {}</code>.</p>
+
+<pre><code class="language-javascript">module.exports = {
+  collectCoverage: true,
+  collectCoverageFrom: [
+    &quot;**/*.{js,vue}&quot;,
+    &quot;!**/node_modules/**&quot;,
+    &quot;!**/coverage/**&quot;,
+    &quot;!.eslintrc.js&quot;,
+    &quot;!jest.config.js&quot;,
+    &quot;!vue.config.js&quot;,
+    &quot;!src/store/index.js&quot;,
+    &quot;!**/__mocks__/**&quot;,
+    &quot;!**/__snapshots__/**&quot;
+  ],
+  moduleFileExtensions: [&quot;js&quot;, &quot;jsx&quot;, &quot;json&quot;, &quot;vue&quot;],
+  transform: {
+    &quot;^.+\\.vue$&quot;: &quot;vue-jest&quot;,
+    &quot;^.+\\.jsx?$&quot;: &quot;babel-jest&quot;
+  },
+  moduleNameMapper: {
+    &quot;\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$&quot;:
+      &quot;&lt;rootDir&gt;/__mocks__/fileMock.js&quot;,
+    &quot;\\.(css|less)$&quot;: &quot;&lt;rootDir&gt;/__mocks__/styleMock.js&quot;,
+    &quot;^@/(.*)$&quot;: &quot;&lt;rootDir&gt;/src/$1&quot;
+  },
+  snapshotSerializers: [&quot;jest-serializer-vue&quot;],
+  verbose: true
+};
+</code></pre>
+
+<h3 id="vue-config-js">vue.config.js</h3>
+
+<p>This little config file is to disable the host check within Webpack (which Vue Cli 3 uses under the hood). Without it, running stuff locally gets weird.</p>
+
+<pre><code class="language-javascript">module.exports = {
+  devServer: {
+    disableHostCheck: true
+  }
+};
+</code></pre>
+
+<h2 id="make-the-right-thing-the-easy-thing">Make the right thing the easy thing</h2>
+
+<p>Frontend programming is hard, but effective tools, processes, and pipelines can mitigate some of the difficulty. Making software is already hard, frontend work can sometimes be harder. Alleviating that pain comes through discipline and proper planning, so say it with me:</p>
+
+<p>Make the right thing the easy thing.</p>
+
+<h2 id="some-supplemental-material">Some supplemental material</h2>
+
+<p>I like reading code, I figure sometimes others wanna read code. Here is a dump of a Vue route I helped write to upload files to Firebase/Google Cloud Storage. Below that will be its respective <a href="#upload-spec-js">test suite</a>.</p>
+
+<h3 id="upload-vue">Upload.vue</h3>
+
+<pre><code class="language-html">&lt;template&gt;
+  &lt;div class=&quot;container&quot;&gt;
+      &lt;h1&gt;Upload Files&lt;/h1&gt;
+      &lt;DragAndDrop&gt;&lt;/DragAndDrop&gt;
+      &lt;div v-if=&quot;uploadingFileCount &gt; 0&quot;&gt;
+        &lt;table&gt;
+          &lt;tr&gt;
+            &lt;th&gt;File Name&lt;/th&gt;
+            &lt;th&gt;Size&lt;/th&gt;
+            &lt;th&gt;Progress&lt;/th&gt;
+            &lt;th&gt;Actions&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr v-for=&quot;file in uploadingFiles&quot; :key=&quot;file.id&quot;&gt;
+            &lt;td&gt;{{ file.name }}&lt;/td&gt;
+            &lt;td&gt;{{ file.size }}&lt;/td&gt;
+            &lt;td&gt;
+              &lt;progress v-if=&quot;!file.isCanceled&quot; :value=&quot;file.progress&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+              &lt;strong class=&quot;canceled&quot; v-if=&quot;file.isCanceled&quot;&gt;Upload Canceled&lt;/strong&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;!-- Pause and resume icons show when they're applicable --&gt;
+              &lt;span v-if=&quot;file.progress !== 100&quot; @click=&quot;toggleUpload(file)&quot;&gt;
+                &lt;font-awesome-icon :class=&quot;iconColor(file)&quot; size=&quot;lg&quot; :icon=&quot;toggleIcon(file)&quot;&gt;&lt;/font-awesome-icon&gt;
+              &lt;/span&gt;
+              &lt;!-- Cancel icon shows while upload is in progress --&gt;
+              &lt;span v-if=&quot;!file.isCanceled &amp;&amp; file.progress !== 100&quot; @click=&quot;cancelUpload(file)&quot;&gt;
+                &lt;font-awesome-icon class=&quot;canceled fa-icon&quot; size=&quot;lg&quot; icon=&quot;ban&quot;&gt;&lt;/font-awesome-icon&gt;
+              &lt;/span&gt;
+              &lt;!-- Checkmark shows if upload is complete --&gt;
+              &lt;span v-if=&quot;file.progress === 100&quot;&gt;
+                &lt;font-awesome-icon :icon=&quot;['far', 'check-circle']&quot; class=&quot;checkmark&quot; size=&quot;lg&quot; tada&gt;&lt;/font-awesome-icon&gt;
+              &lt;/span&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+      &lt;!--SUCCESS--&gt;
+      &lt;div v-if=&quot;uploadedFiles.length &gt; 0&quot;&gt;
+        &lt;h2&gt;Uploaded {{ uploadedFiles.length }} file(s) successfully.&lt;/h2&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import DragAndDrop from &quot;@/components/DragAndDrop&quot;;
+
+export default {
+  components: { DragAndDrop },
+  computed: {
+    uploadingFiles() {
+      return this.$store.getters[&quot;file/getUploadingFiles&quot;];
+    },
+    uploadedFiles() {
+      return this.$store.getters[&quot;file/getUploadedFiles&quot;];
+    },
+    uploadingFileCount() {
+      return this.$store.getters[&quot;file/getUploadingFileCount&quot;];
+    }
+  },
+  methods: {
+    toggleIcon(file) {
+      if (file.isPaused) return [&quot;far&quot;, &quot;play-circle&quot;];
+      return [&quot;far&quot;, &quot;pause-circle&quot;];
+    },
+    iconColor(file) {
+      if (file.isPaused) return &quot;resume fa-icon&quot;;
+      return &quot;pause fa-icon&quot;;
+    },
+    toggleUpload(file) {
+      if (file.isPaused) return file.uploadTask.resume();
+      else return file.uploadTask.pause();
+    },
+    cancelUpload(file) {
+      file.isCanceled = true;
+      file.uploadTask.resume();
+      return file.uploadTask.cancel();
+    }
+  }
+};
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+progress {
+  border: 0;
+  height: 18px;
+  border-radius: 9px;
+  width: 100%;
+}
+::-webkit-progress-bar {
+  background-color: #a8aeb7;
+}
+progress[value]::-webkit-progress-value {
+  background: #3fb776;
+}
+table {
+  width: 100%;
+}
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background-color: #1dcad0;
+  color: white;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.fa-icon {
+  cursor: pointer;
+  padding-right: 5px;
+}
+
+.resume {
+  color: #1dcad0;
+}
+
+.pause {
+  color: #a8aeb7;
+}
+
+.canceled {
+  color: #f6417a;
+}
+
+.checkmark {
+  color: #3fb776;
+}
+&lt;/style&gt;
+</code></pre>
+
+<h3 id="upload-spec-js">Upload.spec.js</h3>
+
+<pre><code class="language-javascript">import { shallow, createLocalVue } from &quot;@vue/test-utils&quot;;
+import { createRenderer } from &quot;vue-server-renderer&quot;;
+import fontAwesome from &quot;@fortawesome/fontawesome&quot;;
+import solid from &quot;@fortawesome/fontawesome-free-solid&quot;;
+import regular from &quot;@fortawesome/fontawesome-free-regular&quot;;
+import FontAwesomeIcon from &quot;@fortawesome/vue-fontawesome&quot;;
+import Vuex from &quot;vuex&quot;;
+
+import Upload from &quot;@/routes/Upload&quot;;
+
+const localVue = createLocalVue();
+fontAwesome.library.add(solid, regular);
+
+localVue.component(&quot;fontAwesomeIcon&quot;, FontAwesomeIcon);
+localVue.use(Vuex);
+
+describe(&quot;Upload route&quot;, () =&gt; {
+  let computed;
+  let getters;
+  let store;
+  let mockFile;
+
+  beforeEach(() =&gt; {
+    getters = {};
+    computed = {};
+
+    mockFile = {
+      name: &quot;Mock File&quot;,
+      size: 1234,
+      progress: 34,
+      isCanceled: false,
+      isPaused: false,
+      id: 1,
+      uploadTask: {
+        pause() {
+          mockFile.isPaused = true;
+        },
+        resume() {
+          mockFile.isPaused = false;
+        },
+        cancel() {
+          mockFile.isCanceled = true;
+        }
+      }
+    };
+
+    getters = {
+      [&quot;file/getUploadingFiles&quot;]: jest.fn().mockReturnValue([mockFile]),
+      [&quot;file/getUploadedFiles&quot;]: jest.fn().mockReturnValue([]),
+      [&quot;file/getUploadingFileCount&quot;]: jest.fn().mockReturnValue(1)
+    };
+
+    store = new Vuex.Store({
+      state: {},
+      getters
+    });
+  });
+
+  it(&quot;pauses the file upload if pause button is clicked&quot;, () =&gt; {
+    const upWrapper = shallow(Upload, { store, localVue });
+    const toggleUploadSpy = jest.spyOn(upWrapper.vm, &quot;toggleUpload&quot;);
+    expect(mockFile.isPaused).toBeFalsy();
+
+    upWrapper.find(&quot;[data-icon='pause-circle']&quot;).trigger(&quot;click&quot;);
+
+    expect(toggleUploadSpy).toHaveBeenCalled();
+    expect(mockFile.isPaused).toBeTruthy();
+  });
+
+  it(&quot;resumes the file upload if the play button is clicked&quot;, () =&gt; {
+    computed.uploadingFiles = () =&gt; {
+      mockFile.isPaused = true;
+      return [mockFile];
+    };
+
+    const upWrapper = shallow(Upload, { store, localVue, computed });
+    const toggleUploadSpy = jest.spyOn(upWrapper.vm, &quot;toggleUpload&quot;);
+    expect(mockFile.isPaused).toBeTruthy();
+
+    upWrapper.find(&quot;[data-icon='play-circle']&quot;).trigger(&quot;click&quot;);
+
+    expect(toggleUploadSpy).toHaveBeenCalled();
+    expect(mockFile.isPaused).toBeFalsy();
+  });
+
+  it(&quot;cancels the file upload if the cancel button is clicked&quot;, () =&gt; {
+    const upWrapper = shallow(Upload, { store, localVue });
+    const cancelUploadSpy = jest.spyOn(upWrapper.vm, &quot;cancelUpload&quot;);
+    expect(mockFile.isCanceled).toBeFalsy();
+
+    upWrapper.find(&quot;[data-icon='ban']&quot;).trigger(&quot;click&quot;);
+
+    expect(cancelUploadSpy).toHaveBeenCalled();
+    expect(mockFile.isCanceled).toBeTruthy();
+  });
+
+  it(&quot;renders a table row for each file in uploading files&quot;, () =&gt; {
+    computed.uploadingFiles = () =&gt; [
+      mockFile,
+      Object.assign({}, mockFile, { id: 2 }),
+      Object.assign({}, mockFile, { id: 3 })
+    ];
+
+    const upWrapper = shallow(Upload, { store, localVue, computed });
+
+    expect(upWrapper.findAll(&quot;[data-icon='pause-circle']&quot;).length).toBe(3);
+  });
+
+  it(&quot;displays a checkmark for a completed upload&quot;, () =&gt; {
+    computed.uploadingFiles = () =&gt; [
+      Object.assign({}, mockFile, { progress: 100 })
+    ];
+    const upWrapper = shallow(Upload, { store, localVue, computed });
+
+    expect(upWrapper.contains(&quot;[data-icon='check-circle']&quot;)).toBeTruthy();
+  });
+
+  it(&quot;displays a counter of successfully uploaded files&quot;, () =&gt; {
+    computed.uploadedFiles = () =&gt; [mockFile];
+    const upWrapper = shallow(Upload, { store, localVue, computed });
+
+    expect(upWrapper.find(&quot;h2&quot;).html()).toBe(
+      &quot;&lt;h2&gt;Uploaded 1 file(s) successfully.&lt;/h2&gt;&quot;
+    );
+  });
+
+  it(&quot;doesn't display a table unless there are files uploading&quot;, () =&gt; {
+    computed.uploadingFileCount = () =&gt; 0;
+    const upWrapper = shallow(Upload, { store, localVue, computed });
+
+    expect(upWrapper.find(&quot;table&quot;).exists()).toBeFalsy();
+  });
+
+  it(&quot;displays a file's name, size, and progress&quot;, () =&gt; {
+    const upWrapper = shallow(Upload, { store, localVue });
+    const tdArray = upWrapper.findAll(&quot;td&quot;);
+
+    // V-bind attributes are no longer html attributes, but rather DOM properties:
+    // https://forum.vuejs.org/t/v-bind-not-working-with-attributes-in-test/19894/6
+    expect(upWrapper.find(&quot;progress&quot;).element.value).toBe(&quot;34&quot;);
+    expect(tdArray.at(0).html()).toBe(`&lt;td&gt;${mockFile.name}&lt;/td&gt;`);
+    expect(tdArray.at(1).html()).toBe(`&lt;td&gt;${mockFile.size}&lt;/td&gt;`);
+  });
+
+  it(&quot;matches snapshot&quot;, () =&gt; {
+    const renderer = createRenderer();
+    const upWrapper = shallow(Upload, { store, localVue });
+
+    return renderer
+      .renderToString(upWrapper.vm)
+      .then(html =&gt; expect(html).toMatchSnapshot());
+  });
+});
+</code></pre>
+
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="section">
+  <div id="footy" class="container">
+    <h3><a href="https://erickrdiaz.com">¯\_(ツ)_/¯</a></h3>
+  </div>
+</section>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+</body>

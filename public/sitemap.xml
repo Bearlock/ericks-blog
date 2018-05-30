@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://erickrdiaz.com/posts/vue-jest-and-netlify/</loc>
+    <lastmod>2018-05-29T10:21:35-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://erickrdiaz.com/posts/what-does-it-mean-to-be-a-good-engineer/</loc>
     <lastmod>2018-02-08T14:13:17-07:00</lastmod>
   </url>
@@ -89,13 +94,13 @@
   
   <url>
     <loc>https://erickrdiaz.com/posts/</loc>
-    <lastmod>2018-02-08T14:13:17-07:00</lastmod>
+    <lastmod>2018-05-29T10:21:35-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://erickrdiaz.com/</loc>
-    <lastmod>2018-02-08T14:13:17-07:00</lastmod>
+    <lastmod>2018-05-29T10:21:35-06:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -11,3 +11,4 @@ screenshots
 sudoku
 humblebundle_hacking.tar.gz
 deploy.sh
+*.swp

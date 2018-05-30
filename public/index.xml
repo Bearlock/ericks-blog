@@ -6,10 +6,19 @@
     <description>Recent content on Robots Have Feelings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Feb 2018 14:13:17 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 29 May 2018 10:21:35 -0600</lastBuildDate>
     
 	<atom:link href="https://erickrdiaz.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vue, Jest, and Netlify</title>
+      <link>https://erickrdiaz.com/posts/vue-jest-and-netlify/</link>
+      <pubDate>Tue, 29 May 2018 10:21:35 -0600</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/vue-jest-and-netlify/</guid>
+      <description>Frontend programming is hard Frontend programming is difficult to do rigorously. It&amp;rsquo;s too easy to cobble together some frontend code that kinda works. Crafting a good user experience with a coherent UI is a craft and a science. And to be honest, a good UX/UI usually makes or breaks a product. The word often tossed around in regards to a good UI is &amp;ldquo;delightful&amp;rdquo;. A quick Google search yields the following definition for delight:</description>
+    </item>
     
     <item>
       <title>What  Does It Mean to Be a Good Engineer</title>
