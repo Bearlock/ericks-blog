@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Robots Have Feelings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 May 2018 10:21:35 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 19 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://erickrdiaz.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A Bit of a Departure</title>
+      <link>https://erickrdiaz.com/posts/a-bit-of-a-departure/</link>
+      <pubDate>Sun, 19 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/a-bit-of-a-departure/</guid>
+      <description>I don&amp;rsquo;t usually do this Pubicly self-reflect that is.
+I usually write about tech stuff and programming. It&amp;rsquo;s what I do; it&amp;rsquo;s easy enough to pump out, and it&amp;rsquo;s compact and digestible on the web. It looks good on a resume and it makes me look like a pseudo-intellectual. Writing about programming doesn&amp;rsquo;t require poetry or prose. It can be about as engaging as a math textbook. And while I&amp;rsquo;m sure I have dear family and friends that read this, I can confidently say that they aren&amp;rsquo;t reading anything on this site expecting to get any sort of emotional sustenance, visceral reaction, or a challenge to their beliefs.</description>
+    </item>
     
     <item>
       <title>Vue, Jest, and Netlify</title>
