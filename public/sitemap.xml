@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://erickrdiaz.com/posts/programming-under-limitations/</loc>
+    <lastmod>2018-10-22T21:02:50-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://erickrdiaz.com/posts/a-bit-of-a-departure/</loc>
     <lastmod>2018-08-19T00:00:00+00:00</lastmod>
   </url>
@@ -99,13 +104,13 @@
   
   <url>
     <loc>https://erickrdiaz.com/posts/</loc>
-    <lastmod>2018-08-19T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-22T21:02:50-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://erickrdiaz.com/</loc>
-    <lastmod>2018-08-19T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-22T21:02:50-06:00</lastmod>
     <priority>0</priority>
   </url>
   

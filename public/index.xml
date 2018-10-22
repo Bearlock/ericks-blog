@@ -6,10 +6,19 @@
     <description>Recent content on Robots Have Feelings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Oct 2018 21:02:50 -0600</lastBuildDate>
     
 	<atom:link href="https://erickrdiaz.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Programming Under Limitations</title>
+      <link>https://erickrdiaz.com/posts/programming-under-limitations/</link>
+      <pubDate>Mon, 22 Oct 2018 21:02:50 -0600</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/programming-under-limitations/</guid>
+      <description>&amp;ldquo;Ideal&amp;rdquo; development isn&amp;rsquo;t ideal Let me clarify; writing code and developing software under ideal conditions is nice. When everything aligns and a project goes off without a hitch, I&amp;rsquo;m spoiled. When everything goes as expected, I can take a step back. I can plan my code and be meticulous. This occasional indulgence in meticulousness is essential to personal growth and development. But it isn&amp;rsquo;t indicative of most real world coding projects.</description>
+    </item>
     
     <item>
       <title>A Bit of a Departure</title>
