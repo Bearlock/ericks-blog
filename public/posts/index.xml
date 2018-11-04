@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Robots Have Feelings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Oct 2018 21:02:50 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 04 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://erickrdiaz.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Serving Others</title>
+      <link>https://erickrdiaz.com/posts/serving-others/</link>
+      <pubDate>Sun, 04 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/serving-others/</guid>
+      <description>Why Build Software? If you would&amp;rsquo;ve asked me that question at the beginning of my software journey, I&amp;rsquo;d probably have said something about wanting to create cool new things, or solve difficult problems; essentially, it was about being at the forefront of technology. Those ideas and wants still hold true, but now I see them as an artifact or product to the software development process. Developing technology for the sake of technology is tautological and navel-gazing.</description>
+    </item>
     
     <item>
       <title>Programming Under Limitations</title>

@@ -6,10 +6,29 @@
     <description>Recent content on Robots Have Feelings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Oct 2018 21:02:50 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 04 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://erickrdiaz.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Serving Others</title>
+      <link>https://erickrdiaz.com/posts/serving-others/</link>
+      <pubDate>Sun, 04 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/serving-others/</guid>
+      <description>Why Build Software? If you would&amp;rsquo;ve asked me that question at the beginning of my software journey, I&amp;rsquo;d probably have said something about wanting to create cool new things, or solve difficult problems; essentially, it was about being at the forefront of technology. Those ideas and wants still hold true, but now I see them as an artifact or product to the software development process. Developing technology for the sake of technology is tautological and navel-gazing.</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://erickrdiaz.com/about/</link>
+      <pubDate>Wed, 31 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://erickrdiaz.com/about/</guid>
+      <description> Hello! Hey folks. I&amp;rsquo;m Erick Diaz. I&amp;rsquo;m a software engineer at Yours and can be found most places online under the handle Bearlock. I&amp;rsquo;m a Utah native that digs exploring all it has to offer with my wife and four dogs. I&amp;rsquo;m interested in all sorts of technologies, philosophies, and bits of useless trivia.
+Games I&amp;rsquo;m playin&amp;rsquo;:  Red Dead Redemption 2 Dishonored 2 Super Mario Party  Books I&amp;rsquo;m readin&amp;rsquo;:  Candide Functional JavaScript  Tools I&amp;rsquo;m jivin&amp;rsquo;:  iTerm2 Vim ChunkWM skhd Hugo  </description>
+    </item>
     
     <item>
       <title>Programming Under Limitations</title>
@@ -86,16 +105,6 @@ My Principles and Patterns of Software Design class (what a mouthful) was one of
 Hacktoberfest If you don&amp;rsquo;t know what that is, here is a short snippet from the official Hacktoberfest website
  Hacktoberfest is a month-long celebration of open source software
  Simple enough explanation. I decided to participate for a couple of reasons:</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>https://erickrdiaz.com/about/</link>
-      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://erickrdiaz.com/about/</guid>
-      <description> Hello! Hey folks. I&amp;rsquo;m Erick Diaz. I&amp;rsquo;m a software engineer at Yours and can be found most places online under the handle Bearlock. I&amp;rsquo;m a Utah native that digs exploring all it has to offer with my wife and four dogs. I&amp;rsquo;m interested in all sorts of technologies, philosophies, and bits of useless trivia.
-Games I&amp;rsquo;m playin&amp;rsquo;:  Enter the Gungeon Celeste Super Mario Galaxy  Books I&amp;rsquo;m readin&amp;rsquo;:  Wheel of Time series re-read Understanding ECMAScript 6  Tools I&amp;rsquo;m jivin&amp;rsquo;:  iTerm2 Vim ChunkWM skhd Hugo  </description>
     </item>
     
     <item>
