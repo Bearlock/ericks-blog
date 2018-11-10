@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Robots Have Feelings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Nov 2018 22:39:05 -0700</lastBuildDate>
     
 	<atom:link href="https://erickrdiaz.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Floating Point Mistakes</title>
+      <link>https://erickrdiaz.com/posts/floating-point-mistakes/</link>
+      <pubDate>Fri, 09 Nov 2018 22:39:05 -0700</pubDate>
+      
+      <guid>https://erickrdiaz.com/posts/floating-point-mistakes/</guid>
+      <description>Integers Are Nice It’s been a while since I’ve had to worry about types and their nuances. JavaScript has been at the core of my stack for the past couple years now. Between Node and Vue (and wanting to dabble in ReasonML on the side), I’m immersed in the JS landscape. I never imagined that a dynamic, weakly-typed language would become a daily tool. And yet, here I am with my imaginations subverted and naivety still in place.</description>
+    </item>
     
     <item>
       <title>Serving Others</title>

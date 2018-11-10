@@ -1,0 +1,176 @@
+<body>
+  <!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="" name="keywords">
+<meta content="Floating Point Mistakes - Robots Have Feelings" property="og:title">
+<title>Floating Point Mistakes | Robots Have Feelings</title>
+<link rel="stylesheet" href="https://erickrdiaz.com/css/style.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+
+
+  <section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://erickrdiaz.com/"><h1 class="title is-4">Robots Have Feelings</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          <a class="level-item nav-text" href="https://erickrdiaz.com/about">About</a>
+          
+          <a class="level-item" href="https://github.com/Bearlock">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://twitter.com/Bearlock_ed">
+            <span class="icon">
+              <i class="fa fa-twitter"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://www.linkedin.com/in/bearlock/">
+            <span class="icon">
+              <i class="fa fa-linkedin"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+  <section class="section">
+    <div class="container">
+      <div class="titlebox">
+        <h1 class="title">Floating Point Mistakes</h1>
+        <h2 class="subtitle is-6">November 9, 2018</h2>
+        
+      </div>
+      <div class="content">
+        
+
+<h2 id="integers-are-nice">Integers Are Nice</h2>
+
+<p>It’s been a while since I’ve had to worry about types and their nuances. JavaScript has been at the core of my stack for the past couple years now. Between Node and Vue (and wanting to dabble in ReasonML on the side), I’m immersed in the JS landscape. I never imagined that a dynamic, weakly-typed language would become a daily tool. And yet, here I am with my imaginations subverted and naivety still in place.</p>
+
+<p>I cut my teeth on C++, but JS is where I&rsquo;ve spent most of my work life. I haven&rsquo;t had to worry about strong typed anything in a while. There is no concept of an integer type in JS. All values are of type <code>Number</code> which is a floating point representation. Which is orthogonal to the several value types there are in C++ (short, int, float, double, long, etc). Lately I&rsquo;ve been dabbling in Elixir which has different value types (including an integer type). It&rsquo;s weird to say, but there&rsquo;s a part of me that misses strong types.</p>
+
+<h2 id="those-halcyon-typed-days">Those Halcyon Typed Days</h2>
+
+<p>College gave me a complex. C++ types were both loved and loathed by everyone. They were great while cowboy coding and using the compiler as a quasi-REPL. The compiler would have a heart attack, point out each glaring mistake, and prompt for a hacky fix. Nothing super painful involved.</p>
+
+<p>Types were insufferable to deal with when they were long and complex. Imagine a complex type, something like <code>std::initializer_list&lt;int&gt;</code>. Now imagine a function that takes that type and complicates it. Maybe to something like, <code>std::vector&lt;std::initializer_list&lt;int&gt;&gt;</code> (or worse). Not an easy abstraction to thought-juggle.</p>
+
+<p>C++ types are comforting when simple but overwhelming when complex. And they can become complex in a few lines of code.</p>
+
+<p>The <a href="https://en.cppreference.com/w/cpp/language/auto">auto</a> keyword was a saving grace.</p>
+
+<p>While those edges were sharp, they were exactly that; edges. The sting of esoteric or weird types was unusual. I lived within the comfortable confines of strings, ints, and doubles. Except doubles (and floating point numbers as a whole) aren&rsquo;t so nice.</p>
+
+<h2 id="rookie-mistakes">Rookie Mistakes</h2>
+
+<p>Being a developer means constant and consistent learning.  Playing with other languages and paradigms is what makes dev life exciting. I&rsquo;ve been tinkering with <a href="elixir">Elixir</a> and solving some exercises on <a href="h4x0r">Hackerrank</a>. It&rsquo;s all been peaches and gravy, but I made a rookie, CS 101 level mistake when messing with it. I&rsquo;ll get to that, but first, some Elixir explanation and background.</p>
+
+<p>Elixir has the concept of a <code>range</code>. It is, in essence, a type/in-fix function that implements the <code>Enumerable</code> protocol (Elixir&rsquo;s version of an interface). It&rsquo;s common in other languages, and in Elixir it looks pretty simple, <code>1..5</code>. This represents a range of numbers from 1 to 5, inclusive. And since Elixir ranges implement the Enumerable protocol, functions in the <code>Enum</code> module can act upon them.</p>
+
+<p>Ranges are great but they only work on integers &ndash; come to find out, that&rsquo;s for a good reason. But I, of course, didn&rsquo;t know that. I <em>needed</em> a range of floats. I&rsquo;m a programmer, and I&rsquo;m not a stranger to hubris; time to write my own floaty pseudo-range.</p>
+
+<p>Here&rsquo;s what it looked like:</p>
+
+<pre><code class="language-elixir">defmodule Random do
+  def subintervals(lower, upper), do: subintervals(lower, upper, [upper])
+  def subintervals(lower, _, [lower | rest]), do: [lower | rest]
+  def subintervals(lower, upper, [upper]), do: subintervals(lower, upper, [upper - 0.1 | upper])
+  def subintervals(lower, upper, [head | rest]), do: subintervals(lower, upper, [head - 0.1 | [head | rest]])
+end
+
+Random.subintervals(1.0, 2.0)
+</code></pre>
+
+<p>This might seem alien to some, but <a href="https://elixir-lang.org/getting-started/pattern-matching.html">pattern matching</a> is one of Elixir&rsquo;s best features. <code>subintervals()</code> is a recursive function. Different versions of it will get executed depending on what pattern gets matched. It&rsquo;s similar to <a href="https://www.geeksforgeeks.org/polymorphism-in-c/">compile time polymorphism/function overloading</a>. The line <code>Random.subintervals(1.0, 2.0)</code> matches the first <code>subintervals()</code> definition. The <code>subintervals()</code> call in the first definition executes <code>subintervals()</code> with three arguments. The third argument is a single item list, that matches the third definition, and it&rsquo;ll recurse from there.</p>
+
+<p>The code above is taking a lower bound (1.0) and an upper bound (2.0). On the first match it pushes the upper bound onto a list, <code>[2.0]</code>. On the next match (third definition) it prepends <code>upper - 0.1</code> onto the list, <code>[1.9, 2.0]</code>. As an aside, Elixir implements lists as linked lists under the hood. Thus, prepending an element to a list is faster than concatenating another list. A little more info <a href="https://hexdocs.pm/elixir/List.html">here</a>. Anyway, so far there exists the list <code>[1.9, 2.0]</code>. The next match would be the last definition of <code>subintervals()</code>. This definition will match a few times resulting in <code>[1.0, 1.1, 1.2. 1.3. 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0]</code>. This last iteration will match the second definition of the function and return the list of numbers, in theory.</p>
+
+<p>Except it doesn&rsquo;t. This didn&rsquo;t work and I kept getting out of memory errors.</p>
+
+<p>Turns out I messed up.</p>
+
+<p>On a surface level the code looks fine. But there&rsquo;s a substantial anti-pattern lurking in the innocent looking code. My mistake came in two parts. First, I did some progressive math on a float type. Then I tried to do an <em>absolute match against the computed value</em>. Floating point numbers aren&rsquo;t absolute. They&rsquo;re approximations. Computers can handle discrete values (like integers) without issue. But they&rsquo;ll have trouble handling the infinite range of values between rational numbers.</p>
+
+<p><a href="http://localhost:1313/posts/floating-point-mistakes/">The elixir docs</a> do a great job of summarizing some of the issues. I&rsquo;ll quote it below (emphasis mine):</p>
+
+<blockquote>
+<p>There are some very well known problems with floating-point numbers and arithmetics due to the fact most decimal fractions cannot be represented by a floating-point binary and most operations are not exact, but operate on approximations. Those issues are not specific to Elixir, they are a property of floating point representation itself.</p>
+
+<p>For example, the numbers 0.1 and 0.01 are approximations, which means the result of squaring 0.1 does not give 0.01 nor the closest representable. Here is what happens in this case:</p>
+
+<ul>
+<li>The closest representable number to 0.1 is 0.1000000014</li>
+<li>The closest representable number to 0.01 is 0.0099999997</li>
+<li>Doing 0.1 * 0.1 should return 0.01, but because 0.1 is actually 0.1000000014, the result is 0.010000000000000002, and because this is not the closest representable number to 0.01, <strong>you’ll get the wrong result for this operation</strong></li>
+</ul>
+</blockquote>
+
+<p>It&rsquo;s spelled out clear as day; &ldquo;you&rsquo;ll get the wrong result for this operation&rdquo;. The code is trying to match exactly on <code>1.0</code>, but it&rsquo;s computed from floating point math. The absolute match isn&rsquo;t guaranteed. And since it&rsquo;s never matched exactly, the function definition that exits the recursive loop is never called. It gets stuck in an infinite loop, the BEAM VM runs out of memory, and my dream of a range for floats dies. At least for a few minutes anyway.</p>
+
+<h2 id="scale-things-up">Scale Things Up</h2>
+
+<p>A quick and dumb-elegant way to handle floating point arithmetic is to not do it. The best pattern is to do integer arithmetic instead. Floats should really only be used in presenting data and when approximations are acceptable.</p>
+
+<p>Floats are down-scaled, &ldquo;rational&rdquo; as in &ldquo;ratio&rsquo;d&rdquo;, integers. That&rsquo;s a weird sentence to write, but bear with me. The remedy to the anti-pattern in the code above is moving the decimal point a few places over. Scaling up is the solution.</p>
+
+<pre><code class="language-elixir">defmodule Random do
+  def subintervals(lower, upper), do: subintervals(lower, upper, [upper])
+  def subintervals(lower, _, [lower | rest]), do: [lower | rest]
+  def subintervals(lower, upper, [upper]), do: subintervals(lower, upper, [upper - 1 | upper])
+  def subintervals(lower, upper, [head | rest]), do: subintervals(lower, upper, [head - 1 | [head | rest]])
+end
+
+Random.subintervals(10, 20)
+</code></pre>
+
+<p>The smallest rational scale the old code dealt with was 0.1, or a tenth. In the new code, all the numeric values get scaled up by a factor of 10. This avoids any problems in accuracy from floating point arithmetic. And when it comes time to present (or use) the integer range as a range of floats, the list can be converted accordingly.</p>
+
+<pre><code class="language-elixir"># . . .
+Random.subintervals(10, 20)
+  |&gt; Enum.map(&amp;(&amp;1 / 10)) # Or more explicitly written as Enum.map(fn x -&gt; x / 10)
+  |&gt; IO.inspect()
+</code></pre>
+
+<h2 id="reinventing-the-wheel">Reinventing The Wheel</h2>
+
+<p>Like I said before, I&rsquo;m no stranger to hubris. I&rsquo;ll continue to trip over things like this constantly. Hopefully with diminishing frequency, but also with increased understanding and learning. Some of you that are quicker than me have uh, probably caught on to the embarrassing fact that I have re-implemented Elixir&rsquo;s <code>range</code> function; with what I can only assume are performance negatives. But there is something valuable in committing a newbie mistake and unpacking it here.</p>
+
+<p>Maybe it&rsquo;ll make me a better engineer.</p>
+
+<p>P.S checkout <a href="https://modernweb.com/what-every-javascript-developer-should-know-about-floating-points/">this great article</a> for a more in-depth dive into floating point numbers.</p>
+
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="section">
+  <div id="footy" class="container">
+    <h3><a href="https://erickrdiaz.com">¯\_(ツ)_/¯</a></h3>
+  </div>
+</section>
+<link rel="stylesheet" href="/css/tomorrow-night.css">
+<script src="/css/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+</body>
