@@ -8,12 +8,12 @@ export default ({ data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>Out of Focus</title>
+        <title>Robots Have Feelings</title>
       </Helmet>
       <div css={css`position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)`}>
         <h1
           css={css`
-            color: rebeccapurple;
+            color: firebrick;
             text-align: center;
           `}
         >

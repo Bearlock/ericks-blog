@@ -78,7 +78,7 @@ export default ({ children, data }) => (
         <ExternalListLink to="https://twitter.com/Bearlock_ed"><FaTwitter /></ExternalListLink>
         <ExternalListLink to="https://www.github.com/Bearlock/"><FaGithub /></ExternalListLink>
         <ExternalListLink to="https://linkedin.com/in/bearlock"><FaLinkedin /></ExternalListLink>
-        <ListLink to="/rss.xml"><FaRss /></ListLink>
+        <ExternalListLink to="/rss.xml"><FaRss /></ExternalListLink>
       </ul>
     </header>
     {children}
