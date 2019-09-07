@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: "Robots Have Feelings",
-    subtitle: "Turing complete Jungian machines",
-    description: "I like to pretend to write and stuff",
+    subtitle: "Turing Complete Jungian Machines",
+    description: "Turing Complete Jungian Machines",
     author: "Erick Diaz",
     siteUrl: "https://erickrdiaz.com",
+    logo: "src/images/icon.png
   },
   plugins: [
     "gatsby-plugin-emotion",
