@@ -65,6 +65,14 @@ export default ({ children, data }) => (
         font-size: 14px;
         display: block;
       }
+
+      h2 {
+        color: firebrick;
+      }
+
+      blockquote {
+        border-left: 0.39rem solid hsla(360, 69%, 41%, 0.62);
+      }
     `}
     />
     <header css={css`margin-bottom: 1.5rem;`}>

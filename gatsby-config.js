@@ -5,7 +5,7 @@ module.exports = {
     description: "Turing Complete Jungian Machines",
     author: "Erick Diaz",
     siteUrl: "https://erickrdiaz.com",
-    logo: "src/images/icon.png
+    logo: "src/images/icon.png",
   },
   plugins: [
     "gatsby-plugin-emotion",

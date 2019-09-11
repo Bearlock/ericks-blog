@@ -9,7 +9,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>{post.frontmatter.title}</title>
+        <title>Robots Have Feelings - {post.frontmatter.title}</title>
       </Helmet>
       <div>
         <h1 css={css`color: firebrick; display: inline-block; margin-bottom: 0;`}>{post.frontmatter.title}</h1>
