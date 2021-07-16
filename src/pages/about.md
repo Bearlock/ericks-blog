@@ -1,6 +1,6 @@
 ---
 title: "About"
-date: "2019-04-03"
+date: "2021-07-15"
 draft: false
 ---
 
@@ -13,15 +13,16 @@ I currently work at [BambooHR][work] making the world a better place through del
 Anyway, I like lists. Here are a few of my favorite things.
 
 ## Games I'm playin':
-- [Hitman 2][game1] 
-- [The Witcher 3: Wild Hunt][game2] 
-- [Super Mario Maker][game3]
+
+- [Hollow Knight][game1] 
+- [Sekiro: Shadows Die Twice][game2] 
+- [Hades][game3] 
 
 ## Books I'm readin':
 
-- [Clojure for the Brave and True][book1] 
+- [Eisenhorn Omnibus][book1]
 - [Designing Data-Intensive Applications][book2]
-- [Google SRE Handbook][book3] 
+- [Staff Engineer][book3] 
 
 ## Tools I'm jivin':
 
@@ -29,18 +30,18 @@ Anyway, I like lists. Here are a few of my favorite things.
 - [Vim][tool2]
 - [ChunkWM][tool3]
 - [skhd][tool4]
-- [GatsbyJS][tool5]
+- [Notion][tool5]
 
 [work]: https://bamboohr.com
-[game1]: https://hitman.com/
-[game2]: https://thewitcher.com/en/witcher3
-[game3]: https://supermariomaker.nintendo.com/
+[game1]: https://www.hollowknight.com/ 
+[game2]: https://www.sekirothegame.com/
+[game3]: https://www.supergiantgames.com/games/hades/
 [book1]: https://www.braveclojure.com/
 [book2]: https://dataintensive.net/
-[book3]: https://landing.google.com/sre/sre-book/toc/index.html
+[book3]: https://staffeng.com/book 
 [tool1]: https://www.iterm2.com/
 [tool2]: https://github.com/vim/vim 
 [tool3]: https://github.com/koekeishiya/chunkwm 
 [tool4]: https://github.com/koekeishiya/skhd
-[tool5]: https://www.gatsbyjs.org/
+[tool5]: https://www.notion.so/ 
 [handle]: https://twitter.com/Bearlock_ed
