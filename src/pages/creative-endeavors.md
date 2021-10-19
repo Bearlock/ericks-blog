@@ -74,8 +74,6 @@ My creativity kinda sucks. Or at least the end result. But it's totally okay bec
 
 I also experimented and dabbled in producing a podcast with a good friend of mine. It's rude, crude, and downright raunchy sometimes, but honest. I edgelord more than I ever wanted to (nerves), I don't like my voice, and my jokes sometimes fall flat. I don't mind too much though, because I had a lot of fun, and it is probably something I wanna revisit in the near future. If my co-host is reading this, I love you boo-boo.
 
-Check out my podcast, aptly named [Out of Focus][oof].
-
 And finally this blog. This blog is so on and off. But it's a good dumping ground for me. I like to write, but I'm not diligent. I have re-read some of my past stuff expecting to cringe (it's happened), but I'm also surprised. I _like_ what I write sometimes. And I think I'll keep doing it. Thanks for indulging me here in my (hopefully not yearly) post. I always appreciate your time. 
 
 Now go and do what Vonnegut said. Practice your art.
