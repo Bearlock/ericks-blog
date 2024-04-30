@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+const pageTitle = "About Me";
+
+const games = [
+  {
+    name: "ULTRAKILL",
+    url: "https://store.steampowered.com/app/1229490/ULTRAKILL/"
+  },
+  {
+    name: "Balatro",
+    url: "https://store.steampowered.com/app/2379780/Balatro/"
+  },
+];
+
+const books = [
+  {
+    name: "First Lie Wins",
+    url: "https://app.thestorygraph.com/books/6e5c0bde-5eb2-4b95-908f-6250bfef21aa"
+  },
+  {
+    name: "Remote: Office Not Required",
+    url: "https://app.thestorygraph.com/books/80141110-ec4e-4df6-bb5c-24922ae5918e"
+  },
+  {
+    name: "The Anthropocene Reviewed",
+    url: "https://app.thestorygraph.com/books/51ce0300-10a6-4fd8-b0c5-f16a1c590534"
+  }
+];
+
+const tools = [
+  {
+    name: "Kitty",
+    url: "https://sw.kovidgoyal.net/kitty/"
+  },
+  {
+    name: "Neovim",
+    url: "https://neovim.io/"
+  },
+  {
+    name: "Neorg (org-mode, for Neovim!)",
+    url: "https://github.com/nvim-neorg/neorg"
+  }
+];
+
+const work = { name: "BambooHR", url: "https://bamboohr.com" };
+---
+<BaseLayout pageTitle={pageTitle}>
+  <h2>Oh Hey!</h2>
+  <p>
+    I'm Erick Diaz. I edit text files for a living and like to pretend that I can write sometimes. This here is a blog that I'm bad at updating, but I drop the occasional nugget of wisdom. Mostly it's a place for me to put thoughts to digital paper, document some of my learnings, and yap into the void.
+  </p>
+  <p>Anyway, I like lists. Here are a few of my favorite things.</p>
+  <h2>Games I'm playin'</h2>
+  <ul>
+    {games.map((game) => <li><a href={game.url}>{game.name}</a></li>)}
+  </ul>
+  <h2>Books I'm readin'</h2>
+  <ul>
+    {books.map((book) => <li><a href={book.url}>{book.name}</a></li>)}
+  </ul>
+  <h2>Tools I'm jivin'</h2>
+  <ul>
+    {tools.map((tool) => <li><a href={tool.url}>{tool.name}</a></li>)}
+  </ul>
+</BaseLayout>

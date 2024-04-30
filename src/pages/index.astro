@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Blogpost from "../components/Blogpost.astro";
+
+const allPosts = await getCollection("posts", ({ data }) => {
+  return data.draft !== true;
+});
+
+allPosts.sort((a, b) => {
+  if (a.data.date < b.data.date) {
+    return 1;
+  }
+
+  if (a.data.date > b.data.date) {
+    return -1;
+  }
+
+  return 0;
+});
+
+const pageTitle = "Posts";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  {allPosts.map((post) => <Blogpost post={post} />)}
+</BaseLayout>
+
