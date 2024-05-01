@@ -8,6 +8,7 @@ pids
 *.swp
 *.swo
 tags
+!tags/
 
 # build output
 dist/
