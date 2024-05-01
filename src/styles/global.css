@@ -122,11 +122,11 @@ blockquote span{
 }
 
  p code {
-  font-size: 90%;
   padding: 2px 4px;
   margin: 0 2px;
   background-color: #e6e9ef;
   color: #179299;
+  word-break: break-all;
 }
 /* End Base */
 
