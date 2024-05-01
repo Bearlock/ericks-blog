@@ -233,6 +233,10 @@ blockquote span{
   display: unset;
 }
 
+.expanded a {
+  padding: 13px;
+}
+
 /* Mobile/small screens */
 @media screen and (min-width: 685px) {
   .nav-links {
