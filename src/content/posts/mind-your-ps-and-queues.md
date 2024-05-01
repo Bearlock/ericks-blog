@@ -1,5 +1,5 @@
 ---
-title: "Mind Your Ps and Queues"
+title: Mind Your Ps and Queues
 description: A look at queuing patterns and some of their tradeoffs
 date: 2021-10-19
 draft: false
