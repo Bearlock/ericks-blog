@@ -89,13 +89,13 @@ This could add all the rigor an org could want while reducing some of the cognit
 
 [Tilt][tilt] on the other hand, is a _totally_ different beast. It's a... development automation framework? `Tilt` supports `Tiltfiles` written in the Starlark dialect (a subset of Python). It provides _a lot_ functionality and semantics to make development easier, but it's still a little abstract to just.. talk about it. Lemme see if I can do better.
 
-`Tilt` let's you define various resources/bundles-of-work. It can a Docker image, Kubernetes YAML, or even a command that's running on your local machine. These're all defined a `Tiltfile`. When you `tilt up`, `Tilt` will apply all the resources defined in the `Tiltfile` (unless you specify otherwise, which is a nice escape hatch).
+`Tilt` let's you define various resources/bundles-of-work. It can be a Docker image, Kubernetes YAML, or even a command that's running on your local machine. These're all defined in a `Tiltfile`. When you `tilt up`, `Tilt` will apply all the resources defined therein (unless you specify otherwise, which is a nice escape hatch).
 
 A lot of the magic or power comes from this... control loop `Tilt` exposes. It'll watch any dependencies (implicit and explicit) to a bundle of work. For example, say that you've defined a Docker image as a resource — any changes to the `Dockerfile` will result in `Tilt` reapplying the resource, i.e, building the Docker image again.
 
 The magic is even more magical with K8s resources.
 
-Let's say you define a `deployment` that includes a Docker image and some source code as it's dependencies. Any changes to _either_ will result in a full rebuild and reapplication of the `deployment` to the target Kubernetes cluster. It reduces the need to manually build the image, push the image to the cluster, and restart/redeploy the `deployment`. It's _magic_.
+Let's say you define a `deployment` that includes a Docker image and some source code as its dependencies. Any changes to _either_ will result in a full rebuild and reapplication of the `deployment` to the target Kubernetes cluster. It reduces the need to manually build the image, push the image to the cluster, and restart/redeploy the `deployment`. It's _magic_.
 
 Here's an example `Tiltfile`:
 
