@@ -2,7 +2,7 @@
 title: Polish Those Soft Skills
 description: Musings on the importance of soft skills
 date: 2024-05-13
-draft: true
+draft: false
 tags: ["no code", "soapbox" ]
 ---
 
