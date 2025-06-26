@@ -1,0 +1,12 @@
+---
+const { datetime } = Astro.props
+const dateOptions = {
+  year: "numeric",
+  month: "long",
+  day: "numeric"
+};
+
+const niceDate = datetime.toLocaleDateString("en-US", dateOptions);
+---
+
+<p class="post-date"><em>{niceDate}</em></p>

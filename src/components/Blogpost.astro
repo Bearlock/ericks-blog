@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { createExcerpt } from "../utils/create-excerpt"
+import { createExcerpt } from "../utils/create-excerpt";
+import Date from "./Date.astro";
 
 interface Props {
   post: CollectionEntry<'posts'>;
@@ -10,7 +11,7 @@ const { post } = Astro.props;
 ---
 
 <div class="post">
-  <h4 class="post-date">{post.data.date.toISOString().slice(0,10)}</h4>
+  <Date datetime={post.data.date} />
   <h3 class="post-title"><a href=`/posts/${post.slug}`>{post.data.title}</a></h3>
   <p>{`${createExcerpt(post.body).substring(0, 300)}...`}</p>
   <br />

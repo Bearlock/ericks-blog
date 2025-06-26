@@ -25,6 +25,18 @@ export async function getStaticPaths() {
 const { tag } = Astro.params;
 const { posts } = Astro.props;
 
+posts.sort((a, b) => {
+  if (a.data.date < b.data.date) {
+    return 1;
+  }
+
+  if (a.data.date > b.data.date) {
+    return -1;
+  }
+
+  return 0;
+});
+
 ---
 
 <BaseLayout pageTitle={tag}>

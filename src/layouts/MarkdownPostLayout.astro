@@ -1,15 +1,22 @@
 ---
-import BaseLayout from "./BaseLayout.astro";
+import BasePostLayout from "./BasePostLayout.astro";
+import Date from "../components/Date.astro";
+
 const { frontmatter } = Astro.props;
 ---
-<BaseLayout pageTitle={frontmatter.title}>
-  <h4 class="post-date">{frontmatter.date.toISOString().slice(0,10)}</h4>
-  <p><em>{frontmatter.description}</em></p>
-  {frontmatter.hasOwnProperty('image') ? <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} /> : ''}
-  <div class="tags">
-    {frontmatter.tags.map((tag) => (
+<BasePostLayout pageTitle={frontmatter.title}>
+  <div class="preamble">
+    <div>
+      <Date datetime={frontmatter.date} />
+      <h1 class="post-title">{frontmatter.title}</h1>
+      <p class="description"><em>{frontmatter.description}</em></p>
+      {frontmatter.hasOwnProperty('image') ? <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} /> : ''}
+    </div>
+    <div class="tags">
+      {frontmatter.tags.map((tag) => (
       <p><a class="tag" href=`/tags/${tag}`>{tag}</a></p>
-    ))}
+      ))}
+    </div>
   </div>
   <slot />
-</BaseLayout>
+</BasePostLayout>
