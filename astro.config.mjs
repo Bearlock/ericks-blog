@@ -4,6 +4,8 @@ import preact from "@astrojs/preact";
 import icon from "astro-icon";
 
 import expressiveCode from "astro-expressive-code";
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,5 +24,22 @@ export default defineConfig({
         codeFontSize: "1rem"
       }
     })
-  ]
+  ],
+  markdown: {
+    rehypePlugins: [
+      rehypeSlug,
+      [
+        rehypeAutolinkHeadings,
+        {
+          behavior: "wrap",
+          headerProperties: {
+            className: ["anchor"]
+          },
+          properties: {
+            className: ["anchor-link"]
+          }
+        }
+      ]
+    ]
+  }
 });
